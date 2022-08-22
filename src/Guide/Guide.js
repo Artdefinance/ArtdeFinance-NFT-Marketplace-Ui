@@ -6,7 +6,7 @@ function Guide() {
     <div className="guide">
       <div className="dropdown-position">
         <h2>Dropbox Menu</h2>
-        <Dropdown width="216px" height="100%" />
+        <Dropdown dropWidth="210px" dropHeight="100%" />
       </div>
       <div className="bubble-position">
         <h2>말풍선 위치</h2>

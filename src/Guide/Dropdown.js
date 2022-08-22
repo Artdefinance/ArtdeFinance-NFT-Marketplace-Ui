@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './Guide.scss';
 
@@ -19,15 +20,13 @@ export default class Dropdown extends React.Component {
 
   render() {
     const { isToggleOn } = this.state;
-    // const { dropboxWidth, dropboxHeight } = this.props;
-
-    const dropdownStyles = {
-      width: '216px',
-      height: '100%',
+    const { dropWidth, dropHeight } = this.props;
+    const dropdownStyle = {
+      width: dropWidth,
+      height: dropHeight,
     };
-
     return (
-      <div className="dropdown" style={dropdownStyles}>
+      <div className="dropdown" style={dropdownStyle}>
         <button type="button" className="dropdown__title" onClick={this.handleClick}>
           <span>Sort by</span>
         </button>
