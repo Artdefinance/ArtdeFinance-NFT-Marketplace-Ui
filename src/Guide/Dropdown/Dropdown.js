@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import './Guide.scss';
+import '../Guide.scss';
+import './Dropdown.scss';
 
 export default class Dropdown extends React.Component {
   constructor(props) {
@@ -25,24 +26,20 @@ export default class Dropdown extends React.Component {
       width: dropWidth,
       height: dropHeight,
     };
+    const { content } = this.props;
     return (
       <div className="dropdown" style={dropdownStyle}>
-        <button type="button" className="dropdown__title" onClick={this.handleClick}>
+        <button type="button" className={isToggleOn ? 'dropdown__title' : 'dropdown__title active'} onClick={this.handleClick}>
           <span>Sort by</span>
         </button>
-        <div className={isToggleOn ? 'dropdown__list' : 'dropdown__list active'}>
-          <button type="button" className="dropdown__item">
-            <span>Sort by ending soon</span>
-          </button>
-          <button type="button" className="dropdown__item">
-            <span>Sort by recently active</span>
-          </button>
-          <button type="button" className="dropdown__item">
-            <span>Sort by newest</span>
-          </button>
-          <button type="button" className="dropdown__item">
-            <span>Sort by oldest</span>
-          </button>
+        <div className={isToggleOn ? 'dropdown__list' : 'dropdown__list active'} style={{ width: dropWidth }}>
+          {
+            content && content.map((items) => (
+              <button type="button" className="dropdown__item" key={items.index}>
+                <span>{items.title}</span>
+              </button>
+            ))
+          }
         </div>
       </div>
     );
