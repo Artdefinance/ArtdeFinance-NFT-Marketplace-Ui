@@ -44,7 +44,7 @@ function Guide() {
       <div className="dropdown-position">
         <h2>Dropbox Menu</h2>
         <div>
-          <Dropdown dropWidth="210px" dropHeight="100%" content={ExampleContent1} />
+          <Dropdown dropWidth="210px" dropHeight="100%" dropTitle="드롭박스이름" content={ExampleContent1} />
           <Dropdown dropWidth="263px" dropHeight="100%" content={ExampleContent2} />
         </div>
         <DateDropdown dropWidth="415px" />

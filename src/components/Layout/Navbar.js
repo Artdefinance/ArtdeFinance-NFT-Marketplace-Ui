@@ -1,24 +1,29 @@
 import React from 'react';
 import './Navbar.scss';
+import Dropdown from '../../Guide/Dropdown/Dropdown';
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAboutMenu: false,
     };
   }
 
-  handleHover = () => {
-    this.setState({ showAboutMenu: true });
-  };
-
-  handleLeave = () => {
-    this.setState({ showAboutMenu: false });
-  };
-
   render() {
-    const { showAboutMenu } = this.state;
+    const menuItems = [
+      {
+        index: '1',
+        title: 'MP-sub01',
+      },
+      {
+        index: '2',
+        title: 'MP-sub02',
+      },
+      {
+        index: '3',
+        title: 'MP-sub03',
+      },
+    ];
     return (
       <nav className="navigation">
         <ul className="nav_menu">
@@ -26,8 +31,7 @@ class Navbar extends React.Component {
             <a>Art Dao</a>
           </li>
           <li className="nav_item" onMouseLeave={this.handleLeave}>
-            <a onMouseEnter={this.handleHover}>Market Place</a>
-            { showAboutMenu && <div /> }
+            <Dropdown dropWidth="" dropHeight="100%" dropTitle="Market Place" dropClass="menu_dropdown" content={menuItems} />
           </li>
           <li className="nav_item">
             <a>Art Loan</a>

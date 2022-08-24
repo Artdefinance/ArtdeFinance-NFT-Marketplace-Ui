@@ -21,16 +21,16 @@ export default class Dropdown extends React.Component {
 
   render() {
     const { isToggleOn } = this.state;
-    const { dropWidth, dropHeight } = this.props;
+    const { dropWidth, dropHeight, dropTitle, dropClass } = this.props;
     const dropdownStyle = {
       width: dropWidth,
       height: dropHeight,
     };
     const { content } = this.props;
     return (
-      <div className="dropdown" style={dropdownStyle}>
+      <div className={`dropdown ${dropClass}`} style={dropdownStyle}>
         <button type="button" className={isToggleOn ? 'dropdown__title' : 'dropdown__title active'} onClick={this.handleClick}>
-          <span>Sort by</span>
+          <span>{dropTitle}</span>
         </button>
         <div className={isToggleOn ? 'dropdown__list' : 'dropdown__list active'} style={{ width: dropWidth }}>
           {
