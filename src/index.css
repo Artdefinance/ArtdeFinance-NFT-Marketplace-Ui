@@ -22,21 +22,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;}
 
 img {
 	max-width: 100%;
 }
 
+ol, ul, li {list-style: none;}
 .noscroll {
 	overflow: hidden !important;
 	height: 100%;
 }
-
 .a11y {
 	position: absolute;
 	width: 1px;
@@ -57,5 +53,3 @@ button {
 	overflow:visible; 
 	cursor:pointer
 }
-
-
