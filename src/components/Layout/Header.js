@@ -1,5 +1,6 @@
 import './Header.scss';
 import Navbar from './Navbar';
+import Button from '../Button/Button';
 
 function Header() {
   const logoStyle = {
@@ -14,6 +15,7 @@ function Header() {
         <input type="text" placeholder="Search by Artwork, Artist and Keywords..." className="search_input" />
       </div>
       <Navbar />
+      <Button>Connet to Wallet</Button>
     </div>
   );
 }
