@@ -1,42 +1,111 @@
 import './Guide.scss';
-import Dropdown from './Dropdown/Dropdown';
-import DateDropdown from './Dropdown/DateDropdown';
+import Dropdown from '../components/Dropdown/Dropdown';
+import DateDropdown from '../components/Dropdown/DateDropdown';
+import TimeDropdown from '../components/Dropdown/TimeDropdown';
+import CountryDropdown from '../components/Dropdown/CountryDropdown';
 
 function Guide() {
   const ExampleContent1 = [
     {
+      id: '1',
       title: 'Artdefinance laps gallery curation',
-      index: '1',
     },
     {
+      id: '2',
       title: 'Art de finance gallery',
-      index: '2',
     },
     {
+      id: '3',
       title: 'Art de finance gallery',
-      index: '3',
     },
     {
+      id: '4',
       title: 'Art de finance gallery',
-      index: '4',
     },
   ];
   const ExampleContent2 = [
     {
+      id: '1',
       title: 'Sort by ending soon',
-      index: '1',
     },
     {
+      id: '2',
       title: 'Sort by recently active',
-      index: '2',
     },
     {
+      id: '3',
       title: 'Sort by newest',
-      index: '3',
     },
     {
+      id: '4',
       title: 'Sort by oldest',
-      index: '4',
+    },
+  ];
+
+  const ExampleContent3 = [
+    {
+      id: '1',
+      title: '14 : 00',
+    },
+    {
+      id: '2',
+      title: '14 : 30',
+    },
+    {
+      id: '3',
+      title: '15 : 00',
+    },
+    {
+      id: '4',
+      title: '15 : 30',
+    },
+    {
+      id: '5',
+      title: '16 : 00',
+    },
+    {
+      id: '6',
+      title: '16 : 30',
+    },
+    {
+      id: '7',
+      title: '17 : 00',
+    },
+    {
+      id: '8',
+      title: '17 : 30',
+    },
+    {
+      id: '9',
+      title: '18 : 00',
+    },
+  ];
+
+  const ExampleContent4 = [
+    {
+      id: '1',
+      title: 'South Korea',
+      country: 'korea_',
+    },
+    {
+      id: '2',
+      title: 'South Korea',
+      country: 'korea_',
+    },
+    {
+      id: '3',
+      title: 'South Korea',
+      country: 'korea_',
+    },
+    {
+      id: '4',
+      title: 'South Korea',
+      country: 'korea_',
+    },
+    {
+      id: '5',
+      title: 'South Korea',
+      country: 'korea_',
     },
   ];
   return (
@@ -45,9 +114,19 @@ function Guide() {
         <h2>Dropbox Menu</h2>
         <div>
           <Dropdown dropWidth="210px" dropHeight="100%" dropTitle="드롭박스이름" content={ExampleContent1} />
-          <Dropdown dropWidth="263px" dropHeight="100%" content={ExampleContent2} />
+          <Dropdown dropWidth="263px" dropHeight="100%" dropTitle="드롭박스이름2" content={ExampleContent2} />
         </div>
-        <DateDropdown dropWidth="415px" />
+        <div>
+          <DateDropdown dropWidth="415px" />
+          <DateDropdown dropWidth="415px" disabled="true" />
+        </div>
+        <div>
+          <TimeDropdown dropWidth="333px" content={ExampleContent3} />
+          <TimeDropdown dropWidth="333px" disabled="true" />
+        </div>
+        <div>
+          <CountryDropdown dropWidth="650px" dropTitle="Please select a country" content={ExampleContent4} />
+        </div>
       </div>
       <div className="bubble-position">
         <h2>말풍선 위치</h2>

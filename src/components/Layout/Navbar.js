@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.scss';
-import Dropdown from '../../Guide/Dropdown/Dropdown';
+import Dropdown from '../Dropdown/Dropdown';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -12,15 +12,15 @@ class Navbar extends React.Component {
   render() {
     const menuItems = [
       {
-        index: '1',
+        id: '1',
         title: 'MP-sub01',
       },
       {
-        index: '2',
+        id: '2',
         title: 'MP-sub02',
       },
       {
-        index: '3',
+        id: '3',
         title: 'MP-sub03',
       },
     ];
