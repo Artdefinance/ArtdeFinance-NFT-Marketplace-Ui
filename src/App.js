@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './Components/Layout/Footer';
 import Header from './Components/Layout/Header';
-import Guide from './Guide/Guide';
+import ArteComponents from './ArteComponent/Components';
+import MarketPlace from './MarketPlace/MarketPlace';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/guide" element={<Guide />} />
+          <Route path="/guide" element={<ArteComponents />} />
+          <Route path="/marketplace" element={<MarketPlace />} />
         </Routes>
         <Footer />
       </BrowserRouter>
