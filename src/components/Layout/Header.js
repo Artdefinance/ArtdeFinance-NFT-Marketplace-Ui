@@ -1,21 +1,33 @@
 import './Header.scss';
+import { Link, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import PrimaryButton from '../Button/PrimaryButton';
+import Button from '../Button/Button';
+import Icons from '../Icons/Icons';
 
 function Header() {
-  const logoStyle = {
-    backgroundImage: 'url(/assets/images/common/logo.png)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-  };
+  const location = useLocation();
+  let headType = '';
+  if (location.pathname === '/gallery/confirm') {
+    headType = 'head_white';
+  }
   return (
-    <div className="head_wrap">
-      <h1 style={logoStyle} className="logo"><a href="/"><span className="a11y">ARTDE FINANCE</span></a></h1>
-      <div className="head_search">
-        <input type="text" placeholder="Search by Artwork, Artist and Keywords..." className="search_input" />
+    <div className={`head_wrap ${headType}`}>
+      <div className="inner">
+        <h1 className="logo">
+          <a href="/path">
+            <img src={`${process.env.PUBLIC_URL}/assets/images/common/logo.png`} alt="ARTDE FINANCE" />
+            <span className="a11y">ARTDE FINANCE</span>
+          </a>
+        </h1>
+        <div className="head_util">
+          <Navbar />
+          <Link to="#" className="link_notice">
+            <span className="cnt">32</span>
+            <Icons shape="notice" />
+          </Link>
+          <Button className="button button--black button--default" content="Connet to Wallet" type="type1" />
+        </div>
       </div>
-      <Navbar />
-      <PrimaryButton content="Connet to Wallet" type="type1" disabled="false" />
     </div>
   );
 }
