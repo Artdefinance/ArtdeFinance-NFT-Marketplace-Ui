@@ -1,4 +1,5 @@
 import './Header.scss';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Button from '../Button/Button';
@@ -6,6 +7,8 @@ import Icons from '../Icons/Icons';
 
 function Header() {
   const location = useLocation();
+  const profileImg = 'https://randomuser.me/api/portraits/men/3.jpg';
+  const [auth, setAuth] = useState(true);
   let headType = '';
   if (location.pathname === '/gallery/confirm') {
     headType = 'head_white';
@@ -15,7 +18,10 @@ function Header() {
       <div className="inner">
         <h1 className="logo">
           <a href="/path">
-            <img src={`${process.env.PUBLIC_URL}/assets/images/common/logo.png`} alt="ARTDE FINANCE" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/images/common/logo.png`}
+              alt="ARTDE FINANCE"
+            />
             <span className="a11y">ARTDE FINANCE</span>
           </a>
         </h1>
@@ -25,7 +31,30 @@ function Header() {
             <span className="cnt">32</span>
             <Icons shape="notice" />
           </Link>
-          <Button className="button button--black button--default" content="Connet to Wallet" type="type1" />
+          {auth ? (
+            <>
+              <button type="button" className="user">
+                <p className="profile">
+                  <img src={profileImg} alt="사용자프로필" />
+                </p>
+                <span>0x5423...432d......</span>
+              </button>
+              <button
+                type="button"
+                className="btn_logout"
+                onClick={() => setAuth(false)}
+              >
+                <Icons shape="logout" />
+              </button>
+            </>
+          ) : (
+            <Button
+              className="button button--black button--default"
+              content="Connet to Wallet"
+              type="type1"
+              pressFucn={() => setAuth(true)}
+            />
+          )}
         </div>
       </div>
     </div>

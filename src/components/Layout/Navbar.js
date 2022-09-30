@@ -4,8 +4,7 @@ import './Navbar.scss';
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
@@ -13,16 +12,13 @@ class Navbar extends React.Component {
       <nav className="navigation">
         <ul className="nav_menu">
           <li className="nav_item">
-            <a>Artist</a>
+            <a>Art Dao</a>
           </li>
           <li className="nav_item">
-            <a>Art Works</a>
+            <a>Marketplace</a>
           </li>
           <li className="nav_item">
-            <a>Curation</a>
-          </li>
-          <li className="nav_item">
-            <a>Works Activity</a>
+            <a>Create</a>
           </li>
         </ul>
       </nav>
