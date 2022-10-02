@@ -1,0 +1,22 @@
+@import '../../assets/css/Mixins.scss';
+
+.alert {
+  @include AcuminproR;
+  position: relative;
+  padding: 10px 20px 10px 56px;
+  box-shadow: 0px 5px 15px rgba(165, 165, 165, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 20px;
+
+  &__icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+
+  &--primary {
+    background: #edf2ff;
+    color: #366dfc;
+  }
+}

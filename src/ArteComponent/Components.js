@@ -35,6 +35,7 @@ import Icons from '../Components/Icons/Icons';
 import Input from '../Components/Inputs/Input';
 import Checkbox from '../Components/Inputs/Checkbox';
 import TagLabel from '../Components/TagLabel';
+import Alert from '../Components/Alert';
 
 function ArteComponents() {
   const ExampleContent1 = [
@@ -684,6 +685,12 @@ function ArteComponents() {
         <TagLabel>Selected</TagLabel>
       </div>
       {/* TagLabel */}
+
+      <div>
+        <h2>Alert</h2>
+        <Alert type="primary">ADF tokens and governance tokens can be used by swapping vADF at a 1:100 ratio.</Alert>
+      </div>
+      {/* Alert */}
     </div>
   );
 }
