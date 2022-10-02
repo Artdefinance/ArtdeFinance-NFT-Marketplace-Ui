@@ -34,6 +34,7 @@ import Icons from '../Components/Icons/Icons';
 // Input
 import Input from '../Components/Inputs/Input';
 import Checkbox from '../Components/Inputs/Checkbox';
+import TagLabel from '../Components/TagLabel';
 
 function ArteComponents() {
   const ExampleContent1 = [
@@ -676,6 +677,13 @@ function ArteComponents() {
       </div>
       {/* Sortable */}
 
+      <div>
+        <h2>TagLabel</h2>
+        <TagLabel type="live">Live</TagLabel>
+        <br />
+        <TagLabel>Selected</TagLabel>
+      </div>
+      {/* TagLabel */}
     </div>
   );
 }
