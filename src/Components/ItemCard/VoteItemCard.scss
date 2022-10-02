@@ -1,0 +1,24 @@
+@import '../../assets/css/Mixins.scss';
+
+.itemcard__btn-vote {
+  margin-top: auto;
+  height: 70px;
+  border-radius: 5px;
+  background: linear-gradient(113.33deg, #000 34.93%, #555 97.4%);
+
+  &:before {
+    @include bg-image-icon('ico_vote.svg');
+    display: inline-block;
+    width: 36px;
+    height: 45px;
+    content: '';
+  }
+
+  &[disabled] {
+    background: linear-gradient(178.21deg, #c8c8c8 50%, #f4f4f4 113.28%);
+  }
+
+  &[disabled]:before {
+    @include bg-image-icon('ico_vote_disabled.svg');
+  }
+}

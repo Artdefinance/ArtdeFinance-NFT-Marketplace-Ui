@@ -1,0 +1,88 @@
+@import '../../assets/css/Mixins.scss';
+
+.itemcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 333px;
+  min-height: 593px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 15px 40px 0 rgba(187, 187, 187, .15);
+
+  &:hover {
+    box-shadow: 0 25px 40px 0 rgba(96, 69, 255, .15);
+  }
+
+  &__img {
+    padding-top: 118%; // 393px/333px
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__time-tag {
+    @include RotaM;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 10px 6px 35px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    background-color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1;
+
+    &:before {
+      @include bg-image-icon('ico_auction.svg');
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      content: '';
+    }
+
+    span {
+      line-height: 1;
+    }
+
+    span + span {
+      margin-left: 11px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: -2px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 22px;
+  }
+
+  &__title {
+    @include AcuminproM;
+    @include ellipse(1);
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  &__desc {
+    @include AcuminproR;
+    @include ellipse(1);
+    font-size: 18px;
+    line-height: 1.2;
+    color: #888;
+    margin: 6px 0 23px;
+  }
+}
