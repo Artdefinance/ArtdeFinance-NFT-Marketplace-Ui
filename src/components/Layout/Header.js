@@ -7,7 +7,7 @@ import Icons from '../Icons/Icons';
 
 function Header() {
   const location = useLocation();
-  const profileImg = 'https://randomuser.me/api/portraits/men/3.jpg';
+  const profileImg = 'https://source.unsplash.com/random/128x128/?profile';
   const [auth, setAuth] = useState(true);
   let headType = '';
   if (location.pathname === '/gallery/confirm') {
