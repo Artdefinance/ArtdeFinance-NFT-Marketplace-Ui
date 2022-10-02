@@ -5,6 +5,7 @@ function Path() {
   const list = [
     ['arte components', '-', '/artecomponents'],
     ['Main', 'Main', '/main'],
+    ['ArtDao', 'Token Swap', '/art-dao/token-swap'],
   ];
   return (
     <div>
