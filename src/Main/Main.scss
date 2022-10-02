@@ -1,3 +1,5 @@
+@import '../assets/css/Mixins.scss';
+
 .main {
   max-width: 1440px;
   margin: 0 auto;
@@ -6,6 +8,8 @@
 
 .main-slider {
   position: relative;
+  background-color: #fff;
+  box-shadow: 0px 15px 40px rgba(187, 187, 187, 0.15);
 
   &__progress {
     position: absolute;
@@ -68,5 +72,54 @@
     li.slick-active ~ li:before {
       transform: scaleX(0);
     }
+  }
+}
+
+.main-list {
+  margin-top: 152px;
+
+  &:last-child {
+    margin-bottom: 152px;
+  }
+
+  &__header {
+    display: flex;
+
+    .tag-label {
+      position: relative;
+      top: 8px;
+    }
+  }
+
+  &__title {
+    @include RotaB;
+    font-size: 36px;
+    line-height: 1;
+    margin-right: 14px;
+    color: #000;
+  }
+
+  &__link {
+    @include RotaB;
+    position: relative;
+    display: inline-block;
+    margin-top: auto;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 24px;
+    color: #888;
+
+    &:after {
+      @include bg-image-icon('ico_chevron_big.svg');
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      vertical-align: top;
+      content: '';
+    }
+  }
+
+  &__cards {
+    margin-top: 36px;
   }
 }

@@ -1,11 +1,12 @@
 import './ArtBanner.scss';
 
 function ArtBanner() {
-  const profileImg = 'https://randomuser.me/api/portraits/men/3.jpg';
+  const profileImg = 'https://source.unsplash.com/random/128x128/?profile';
+  const imageUrl = 'https://source.unsplash.com/random/468x495/?art';
   return (
     <div className="art-banner">
       <div className="art-banner__figure">
-        <img className="art-banner__figure-img" src="" alt="" />
+        <img className="art-banner__figure-img" src={imageUrl} alt="" />
       </div>
       <div className="art-banner__info">
         <span className="art-banner__author">
