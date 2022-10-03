@@ -1,10 +1,14 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import './Pagenation.scss';
 import Icons from '../Icons/Icons';
+import CircularProgress from '../CircularProgress';
 
-function Pagenation() {
+function Pagenation({ isProgressVisible }) {
   return (
     <div className="pagenation">
+      {isProgressVisible && (
+        <CircularProgress className="pagenation__progress" />
+      )}
       <button type="button" className="pagenation__arrow arrow-left">
         <Icons shape="pagenation-left" width="24px" height="24px" />
         {/* <Icons shape="pagenation-left--black" width="24px" height="24px" /> */}
@@ -36,5 +40,13 @@ function Pagenation() {
     </div>
   );
 }
+
+Pagenation.defaultProps = {
+  isProgressVisible: false,
+};
+
+Pagenation.propTypes = {
+  isProgressVisible: PropTypes.bool,
+};
 
 export default Pagenation;
