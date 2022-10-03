@@ -1,15 +1,16 @@
 @import '../../assets/css/Mixins.scss';
 
 .footer {
-  padding: 114px 0 33px;
   background-color: #19191b;
 }
 
 .footer-inner {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
+  padding: 24px 0 33px;
+  background-color: #19191b;
 }
 
 .footer-subtitle {
@@ -28,6 +29,8 @@
 }
 
 .footer-subscribe {
+  padding-top: 90px;
+
   .footer-subtitle {
     margin-bottom: 9px;
   } 
@@ -90,6 +93,7 @@
 
 .footer-channel {
   margin-left: auto;
+  padding-top: 90px;
   padding-right: 64px;
 
   .footer-subtitle {
@@ -129,7 +133,8 @@
 
 .footer-sitemap {
   display: flex;
-  flex-direction: flex-end;
+  justify-content: flex-end;
+  padding-right: 47px;
 
   .footer-message {
     width: 261px;
