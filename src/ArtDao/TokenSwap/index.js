@@ -1,5 +1,6 @@
 import { useId } from 'react';
 import Alert from '../../Components/Alert';
+import Button from '../../Components/Button/Button';
 import './TokenSwap.scss';
 
 function TokenSwap() {
@@ -43,7 +44,7 @@ function TokenSwap() {
           A swapped vADF does not support swapping back to ADF.
           ADF cannot be swapped in decimal units.
         </Alert>
-        <button type="submit" className="token-swap__btn-submit button button--black button--big button--type2">SWAP</button>
+        <Button className="token-swap__btn-submit button button--black button--default" content="SWAP" type="type1" />
       </form>
     </div>
   );

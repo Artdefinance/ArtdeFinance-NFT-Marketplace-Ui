@@ -1,0 +1,9 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-subtitle {
+  @include RotaB;
+  display: block;
+  font-size: 16px;
+  line-height: 1.3475;
+  color: #555;
+}

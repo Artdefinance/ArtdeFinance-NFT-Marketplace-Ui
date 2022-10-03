@@ -7,6 +7,7 @@ function Path() {
     ['Main', 'Main', '/main'],
     ['ArtDao', 'Token Swap', '/art-dao/token-swap'],
     ['ArtDao', 'DAO Voting', '/art-dao/dao-voting'],
+    ['ArtDao', 'DAO Voting - Detail 01', '/art-dao/dao-voting/detail01'],
   ];
   return (
     <div>

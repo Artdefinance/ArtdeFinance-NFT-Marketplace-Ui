@@ -1,0 +1,36 @@
+.dao-voting-detail {
+  padding: 11px 0 84px;
+
+  .breadcrumbs {
+    margin-bottom: 9px;
+  }
+
+  &__spec-accordion {
+    .MuiAccordionDetails-root {
+      padding: 0;
+    }
+
+    .infocard-spec-list {
+      margin: 9px 0;
+    }
+
+    .infocard-spec-list--wide {
+      margin: 0;
+
+      dt:first-of-type,
+      dd:first-of-type {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+    .button {
+      width: calc(50% - 18px);
+    }
+  }
+}
