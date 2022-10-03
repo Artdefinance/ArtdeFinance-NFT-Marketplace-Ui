@@ -4,7 +4,7 @@ import ArtBanner from './ArtBanner';
 import TagLabel from '../Components/TagLabel';
 import ItemCardList from '../Components/ItemCardList';
 import VoteItemCard from '../Components/ItemCard/VoteItemCard';
-import ArtItemCard from '../Components/ItemCard/ArtItemCard';
+import ArtistItemCard from '../Components/ItemCard/ArtistItemCard';
 import './Main.scss';
 
 function Main() {
@@ -33,7 +33,7 @@ function Main() {
           <TagLabel type="live">Live</TagLabel>
           <Link className="main-list__link" href="/main">See more</Link>
         </div>
-        <ItemCardList className="main-list__cards">
+        <ItemCardList>
           <VoteItemCard
             imageUrl={imageUrl}
             title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
@@ -63,8 +63,8 @@ function Main() {
           <h3 className="main-list__title">Most Popular Artist</h3>
           <Link className="main-list__link" href="/main">See more</Link>
         </div>
-        <ItemCardList className="main-list__cards">
-          <ArtItemCard
+        <ItemCardList>
+          <ArtistItemCard
             imageUrl={imageUrl}
             title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
             description="Starry Night Over the Rhon Starry Night Over the Rhon"
@@ -72,7 +72,7 @@ function Main() {
             priceIconUrl={`${process.env.PUBLIC_URL}/assets/images/icons/coin/ico_price_eth.svg`}
             priceValue="15,000,000.00 ETH"
           />
-          <ArtItemCard
+          <ArtistItemCard
             imageUrl={imageUrl}
             title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
             description="Starry Night Over the Rhon Starry Night Over the Rhon"
@@ -80,7 +80,7 @@ function Main() {
             priceIconUrl={`${process.env.PUBLIC_URL}/assets/images/icons/coin/ico_price_matic.svg`}
             priceValue="15,000,000.00 MATIC"
           />
-          <ArtItemCard
+          <ArtistItemCard
             imageUrl={imageUrl}
             title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
             description="Starry Night Over the Rhon Starry Night Over the Rhon"
@@ -88,7 +88,7 @@ function Main() {
             priceIconUrl={`${process.env.PUBLIC_URL}/assets/images/icons/coin/ico_price_matic.svg`}
             priceValue="15,000,000.00 MATIC"
           />
-          <ArtItemCard
+          <ArtistItemCard
             imageUrl={imageUrl}
             title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
             description="Starry Night Over the Rhon Starry Night Over the Rhon"

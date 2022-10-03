@@ -1,12 +1,9 @@
 @import '../../assets/css/Mixins.scss';
 
-.itemcard--art {
-  min-height: 563px;
-}
-
 .itemcard__price {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   margin-top: 2px;
   padding-top: 23px;
   // border-top 0.5px
@@ -33,5 +30,14 @@
     font-size: 18px;
     line-height: 1;
     color: #000;
+  }
+
+  &-value-coin {
+    @include RotaM;
+    display: block;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #888;
+    margin-top: 4px;
   }
 }

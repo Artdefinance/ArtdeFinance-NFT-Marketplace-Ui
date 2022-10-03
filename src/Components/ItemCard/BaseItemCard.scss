@@ -85,4 +85,36 @@
     color: #888;
     margin: 6px 0 23px;
   }
+
+  &__price {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2px;
+    padding-top: 23px;
+    // border-top 0.5px
+    font-size: 10px;
+    box-shadow: 0px -0.05em 0px #ddd;
+  
+    &-sell {
+      @include RotaSB;
+      font-size: 14px;
+      line-height: 1;
+      color: #9f9f9f;
+      margin-right: auto;
+    }
+  
+    &-icon {
+      display: inline-block;
+      padding-right: 5px;
+      line-height: 1;
+      vertical-align: middle;
+    }
+  
+    &-value {
+      @include RotaB;
+      font-size: 18px;
+      line-height: 1;
+      color: #000;
+    }
+  }
 }

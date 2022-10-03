@@ -76,14 +76,19 @@
 }
 
 .main-list {
-  margin-top: 152px;
+  margin-top: 154px;
+
+  + .main-list {
+    margin-top: 84px;
+  }
 
   &:last-child {
-    margin-bottom: 152px;
+    margin-bottom: 88px;
   }
 
   &__header {
     display: flex;
+    margin-bottom: 36px;
 
     .tag-label {
       position: relative;
@@ -117,9 +122,5 @@
       vertical-align: top;
       content: '';
     }
-  }
-
-  &__cards {
-    margin-top: 36px;
   }
 }

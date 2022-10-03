@@ -1,47 +1,48 @@
 import PropTypes from 'prop-types';
 import BaseItemCard from './BaseItemCard';
-import './ArtItemCard.scss';
+import './ArtistItemCard.scss';
 
-function ArtItemCard({
+function ArtistItemCard({
   imageUrl,
   title,
   description,
   sellType,
+  priceIconUrl,
   priceValue,
-  coinPriceValue,
 }) {
   return (
     <BaseItemCard
-      className="itemcard--artist"
       imageUrl={imageUrl}
       title={title}
       description={description}
     >
       <div className="itemcard__price">
         <span className="itemcard__price-sell">{sellType}</span>
+        <span className="itemcard__price-icon">
+          <img src={priceIconUrl} alt="" />
+        </span>
         <span className="itemcard__price-value">{priceValue}</span>
-        <span className="itemcard__price-value-coin">{coinPriceValue}</span>
       </div>
     </BaseItemCard>
   );
 }
 
-ArtItemCard.defaultProps = {
+ArtistItemCard.defaultProps = {
   imageUrl: '',
   title: '',
   description: '',
   sellType: '',
+  priceIconUrl: '',
   priceValue: '',
-  coinPriceValue: '',
 };
 
-ArtItemCard.propTypes = {
+ArtistItemCard.propTypes = {
   imageUrl: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   sellType: PropTypes.string,
+  priceIconUrl: PropTypes.string,
   priceValue: PropTypes.string,
-  coinPriceValue: PropTypes.string,
 };
 
-export default ArtItemCard;
+export default ArtistItemCard;

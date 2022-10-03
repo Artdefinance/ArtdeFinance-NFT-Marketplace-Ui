@@ -7,6 +7,7 @@ function VoteItemCard({
   title,
   description,
   isVoted,
+  isExpired,
 }) {
   return (
     <BaseItemCard
@@ -14,9 +15,15 @@ function VoteItemCard({
       title={title}
       description={description}
     >
-      <button type="button" className="itemcard__btn-vote" disabled={isVoted}>
-        <span className="a11y">Vote</span>
-      </button>
+      {isExpired ? (
+        <div className="itemcard__vote-expired">
+          Voting period expired
+        </div>
+      ) : (
+        <button type="button" className="itemcard__btn-vote" disabled={isVoted}>
+          <span className="a11y">Vote</span>
+        </button>
+      )}
     </BaseItemCard>
   );
 }
@@ -26,6 +33,7 @@ VoteItemCard.defaultProps = {
   title: '',
   description: '',
   isVoted: false,
+  isExpired: false,
 };
 
 VoteItemCard.propTypes = {
@@ -33,6 +41,7 @@ VoteItemCard.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   isVoted: PropTypes.bool,
+  isExpired: PropTypes.bool,
 };
 
 export default VoteItemCard;
