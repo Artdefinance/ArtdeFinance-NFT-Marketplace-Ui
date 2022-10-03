@@ -98,3 +98,8 @@ button {
 	overflow:visible; 
 	cursor:pointer
 }
+
+.page-content {
+	width: 1440px;
+  margin: 0 auto;
+}

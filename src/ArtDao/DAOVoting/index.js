@@ -7,7 +7,7 @@ import './DAOVoting.scss';
 function DAOVoting() {
   const imageUrl = 'https://source.unsplash.com/random/666x786/?art';
   return (
-    <div className="dao-voting">
+    <div className="page-content dao-voting">
       <h2 className="dao-voting__title">DAO Voting</h2>
       <ItemCardList className="dao-voting__list">
         <VoteItemCard

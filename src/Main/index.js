@@ -10,7 +10,7 @@ import './Main.scss';
 function Main() {
   const imageUrl = 'https://source.unsplash.com/random/666x786/?art';
   return (
-    <div className="main">
+    <div className="page-content main">
       <Slider
         className="main-slider"
         dots
