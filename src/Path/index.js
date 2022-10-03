@@ -6,6 +6,7 @@ function Path() {
     ['arte components', '-', '/artecomponents'],
     ['Main', 'Main', '/main'],
     ['ArtDao', 'Token Swap', '/art-dao/token-swap'],
+    ['ArtDao', 'DAO Voting', '/art-dao/dao-voting'],
   ];
   return (
     <div>

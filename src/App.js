@@ -4,6 +4,7 @@ import Header from './Components/Layout/Header';
 import Path from './Path';
 import Main from './Main';
 import TokenSwap from './ArtDao/TokenSwap';
+import DAOVoting from './ArtDao/DAOVoting';
 import ArteComponents from './ArteComponent/Components';
 import MarketPlace from './MarketPlace/MarketPlace';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/path" element={<Path />} />
           <Route path="/main" element={<Main />} />
           <Route path="/art-dao/token-swap" element={<TokenSwap />} />
+          <Route path="/art-dao/dao-voting" element={<DAOVoting />} />
           <Route path="/marketplace" element={<MarketPlace />} />
         </Routes>
         <Footer />

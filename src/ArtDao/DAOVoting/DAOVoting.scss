@@ -1,0 +1,19 @@
+@import '../../assets/css/Mixins.scss';
+
+.dao-voting {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 96px 0 119px;
+
+  &__title {
+    @include RotaB;
+    font-size: 64px;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 116px;
+  }
+
+  .pagenation {
+    margin-top: 7px;
+  }
+}
