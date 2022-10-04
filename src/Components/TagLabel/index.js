@@ -15,7 +15,7 @@ TagLabel.defaultProps = {
 
 TagLabel.propTypes = {
   children: PropTypes.string,
-  type: PropTypes.oneOf(['live']),
+  type: PropTypes.oneOf(['', 'live']),
 };
 
 export default TagLabel;

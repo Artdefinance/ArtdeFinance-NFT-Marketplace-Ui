@@ -16,9 +16,7 @@ function InfoHistory({ historyList }) {
 }
 
 InfoHistory.propTypes = {
-  historyList: PropTypes.arrayOf(
-    PropTypes.arrayOf([PropTypes.string, PropTypes.string, PropTypes.string]),
-  ).isRequired,
+  historyList: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
 };
 
 export default InfoHistory;
