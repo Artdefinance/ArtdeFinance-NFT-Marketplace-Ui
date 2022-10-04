@@ -1,23 +1,27 @@
-import InfoCard from './InfoCard';
 import InfoAccordion from './InfoAccordion';
 import InfoArtist from './InfoArtist';
+import InfoCard from './InfoCard';
+import InfoCurator from './InfoCurator';
 import InfoHistory from './InfoHistory';
 import InfoParagraph from './InfoParagraph';
-import InfoSubtitle from './InfoSubtitle';
 import InfoPreview from './InfoPreview';
-import InfoSpecList from './InfoSpecList';
 import InfoPrice from './InfoPrice';
+import InfoSlider from './InfoSlider';
+import InfoSpecList from './InfoSpecList';
+import InfoSubtitle from './InfoSubtitle';
 import CuratorInfoCard from './CuratorInfoCard';
 
 export {
-  InfoCard,
   InfoAccordion,
   InfoArtist,
+  InfoCard,
+  InfoCurator,
   InfoHistory,
   InfoParagraph,
-  InfoSubtitle,
   InfoPreview,
-  InfoSpecList,
   InfoPrice,
+  InfoSlider,
+  InfoSpecList,
+  InfoSubtitle,
   CuratorInfoCard,
 };
