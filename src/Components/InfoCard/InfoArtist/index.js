@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import InfoSubtitle from '../InfoSubtitle';
 import InfoParagraph from '../InfoParagraph';
 import Icons from '../../Icons/Icons';
@@ -17,12 +18,12 @@ function InfoArtist() {
         </div>
         <InfoSubtitle>Country</InfoSubtitle>
         <span className="infocard-artist__text">United States of America</span>
-        <a href="/" className="infocard-artist__download">
+        <Link to="/" className="infocard-artist__download">
           Artist CV Detail View
           <span className="infocard-artist__ico-download">
             <Icons shape="download" />
           </span>
-        </a>
+        </Link>
       </div>
       <InfoSubtitle>Biography</InfoSubtitle>
       <InfoParagraph>

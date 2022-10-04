@@ -31,7 +31,7 @@ function Main() {
         <div className="main-list__header">
           <h3 className="main-list__title">Now Curating</h3>
           <TagLabel type="live">Live</TagLabel>
-          <Link className="main-list__link" href="/main">See more</Link>
+          <Link to="/" className="main-list__link" href="/main">See more</Link>
         </div>
         <ItemCardList>
           <VoteItemCard
@@ -61,7 +61,7 @@ function Main() {
       <div className="main-list">
         <div className="main-list__header">
           <h3 className="main-list__title">Most Popular Artist</h3>
-          <Link className="main-list__link" href="/main">See more</Link>
+          <Link to="/" className="main-list__link" href="/main">See more</Link>
         </div>
         <ItemCardList>
           <ArtistItemCard
