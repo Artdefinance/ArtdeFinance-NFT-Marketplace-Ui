@@ -1,0 +1,23 @@
+.curator-infocard-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .infocard-container {
+    width: calc(33.3% - 24px);
+    margin-bottom: 36px;
+    box-sizing: border-box;
+  }
+
+  // Detail01
+  .infocard-list > & {
+    margin-top: -48px;
+
+    .infocard-container {
+      width: 50%;
+      margin: 0;
+      padding: 18px;
+      box-sizing: border-box;
+    }
+  }
+}

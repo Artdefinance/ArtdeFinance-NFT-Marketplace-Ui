@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import './InfoSpecList.scss';
 
-function InfoSpecList({ className, specs, compact, wide }) {
+function InfoSpecList({ className, specs, compact, semiCompact, wide }) {
   return (
     <dl
       className={clsx('infocard-spec-list', className, {
         'infocard-spec-list--compact': compact,
+        'infocard-spec-list--semi-compact': semiCompact,
         'infocard-spec-list--wide': wide,
       })}
     >
@@ -24,6 +25,7 @@ function InfoSpecList({ className, specs, compact, wide }) {
 InfoSpecList.defaultProps = {
   className: '',
   compact: false,
+  semiCompact: false,
   wide: false,
 };
 
@@ -31,6 +33,7 @@ InfoSpecList.propTypes = {
   className: PropTypes.string,
   specs: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
   compact: PropTypes.bool,
+  semiCompact: PropTypes.bool,
   wide: PropTypes.bool,
 };
 

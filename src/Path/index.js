@@ -6,9 +6,12 @@ function Path() {
     ['arte components', '-', '/artecomponents'],
     ['Main', 'Main', '/main'],
     ['ArtDao', 'Token Swap', '/art-dao/token-swap'],
-    ['ArtDao', 'DAO Voting', '/art-dao/dao-voting'],
-    ['ArtDao', 'DAO Voting - Detail 01', '/art-dao/dao-voting/detail01'],
-    ['ArtDao', 'DAO Voting - Detail 02', '/art-dao/dao-voting/detail02'],
+    ['', 'DAO Voting', '/art-dao/dao-voting'],
+    ['', 'DAO Voting - Detail', '/art-dao/dao-voting/detail'],
+    ['', 'DAO Voting - Detail - Modal 1', '/art-dao/dao-voting/detail-modal-1'],
+    ['', 'DAO Voting - Detail - Curation Results', '/art-dao/dao-voting/curation-results'],
+    ['', 'DAO Voting - Results', '/art-dao/dao-voting/results'],
+    ['', 'DAO Voting - Detail - Modal 2', '/art-dao/dao-voting/detail-modal-2'],
   ];
   return (
     <div>

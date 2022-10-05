@@ -11,6 +11,7 @@ import {
   CuratorInfoCard,
 } from '../../Components/InfoCard';
 import InfoCardList from '../../Components/InfoCardList';
+import CuratorInfoCardList from '../../Components/InfoCardList/CuratorInfoCardList';
 import Button from '../../Components/Button/Button';
 import './Detail.scss';
 
@@ -204,7 +205,7 @@ function DaoVotingDetail() {
             </div>
           </InfoAccordion>
         </InfoCard>
-        <InfoCardList>
+        <CuratorInfoCardList>
           <CuratorInfoCard
             name="Artdefinance Reality sub labs gallery"
             imageUrl={curatorImageUrl}
@@ -212,61 +213,16 @@ function DaoVotingDetail() {
             secondaryValue="1,500,000.00"
             selected
           />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-          <CuratorInfoCard
-            name="Artdefinance Reality sub labs gallery"
-            imageUrl={curatorImageUrl}
-            primaryValue="1,500,000.00"
-            secondaryValue="1,500,000.00"
-          />
-        </InfoCardList>
+          {Array.from(Array(9)).map((_, index) => (
+            <CuratorInfoCard
+              key={`${index.toString()}`}
+              name="Artdefinance Reality sub labs gallery"
+              imageUrl={curatorImageUrl}
+              primaryValue="1,500,000.00"
+              secondaryValue="1,500,000.00"
+            />
+          ))}
+        </CuratorInfoCardList>
       </InfoCardList>
     </div>
   );

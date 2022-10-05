@@ -31,6 +31,12 @@
     }
   }
 
+  &--semi-compact {
+    dt, dd {
+      margin-top: 15px;
+    }
+  }
+
   &--wide {
     dd {
       text-align: right;

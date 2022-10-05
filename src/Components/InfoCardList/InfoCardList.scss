@@ -7,7 +7,7 @@
     margin: 0;
   }
 
-  .infocard-container {
+  > .infocard-container {
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     page-break-inside: avoid;

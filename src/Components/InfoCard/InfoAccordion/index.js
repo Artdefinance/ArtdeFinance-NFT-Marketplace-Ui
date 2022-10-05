@@ -6,7 +6,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import clsx from 'clsx';
 import Icons from '../../Icons/Icons';
-import './InfoAccordion.scss';
+import InfoTitle from '../InfoTitle';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -67,12 +67,12 @@ function InfoAccordion({ className, title, children, defaultExpanded }) {
       onChange={() => setExpanded(!expanded)}
     >
       <AccordionSummary
-        className={`${classes.summary} infocard-accordion__summary`}
+        className={classes.summary}
         expandIcon={<Icons shape="arrow-down" />}
         aria-controls={controlsId}
         id={summaryId}
       >
-        {title}
+        <InfoTitle>{title}</InfoTitle>
       </AccordionSummary>
       <AccordionDetails className={classes.details}>
         {children}

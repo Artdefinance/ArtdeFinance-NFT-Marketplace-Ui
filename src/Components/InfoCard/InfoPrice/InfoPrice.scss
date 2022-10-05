@@ -12,12 +12,13 @@
   }
   
   &__list {
+    border-radius: 5px;
     padding: 13px 20px 9px;
     background-color: #f4f4f4;
   }
 
   &__row {
-    margin: 7px 0;
+    margin: 8px 0;
     text-align: right;
   }
 
@@ -47,5 +48,15 @@
     color: #888;
     margin-left: 15px;
     text-align: center;
+  }
+
+  &--compact {
+    .infocard-price__primary-value {
+      font-size: 24px;
+    }
+  
+    .infocard-price__secondary-value {
+      font-size: 18px;
+    }
   }
 }

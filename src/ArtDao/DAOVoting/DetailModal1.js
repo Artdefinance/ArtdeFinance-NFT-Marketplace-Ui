@@ -1,15 +1,16 @@
 import { useId } from 'react';
 import Modal from '@material-ui/core/Modal';
-import Detail01 from './Detail01';
+import Detail from './Detail';
 import {
   InfoCard,
   InfoCurator,
+  InfoExpectedValue,
   InfoPrice,
   InfoSlider,
 } from '../../Components/InfoCard';
 import Button from '../../Components/Button/Button';
 
-function DaoVotingDetail02() {
+function DaoVotingDetailModal1() {
   const curatorImageUrl = 'https://source.unsplash.com/random/128x128/?profile';
   const labelId = useId();
   const describeId = useId();
@@ -23,37 +24,36 @@ function DaoVotingDetail02() {
 
   return (
     <>
-      <Detail01 />
+      <Detail />
       <Modal
-        className="modal-price-status"
+        className="modal-dao-voting modal-price-status"
         open
         aria-labelledby={labelId}
         aria-describedby={describeId}
         BackdropProps={backdropProps}
       >
-        <div className="modal-price-status__content">
+        <div className="modal-dao-voting__content">
           <InfoCard>
             <InfoCurator
               name="Artdefinance Reality sub labs gallery"
               imageUrl={curatorImageUrl}
+              wide
             />
             <div className="modal-price-status__body">
               <div className="modal-price-status__body-price">
                 <InfoPrice
+                  compact
                   title="Curation Price"
                   primaryValue="1,500,000.00"
                   secondaryValue="1,500,000.00"
                 />
                 <InfoPrice
+                  compact
                   title="Curation Price"
                   primaryValue="1,500,000.00"
                   secondaryValue="1,500,000.00"
                 />
-                <div className="modal-price-status__expect">
-                  Expexted value of this after
-                  <em>3</em>
-                  years
-                </div>
+                <InfoExpectedValue years="3" />
               </div>
               <div className="modal-price-status__body-slider">
                 <InfoSlider
@@ -99,9 +99,9 @@ function DaoVotingDetail02() {
               staying in Rijks akademie residency for 2 years from 2013. European Art Scene started
               paying attention to him after his solo exhibition at Galerie Bart.
             </p>
-            <div className="modal-price-status__footer">
-              <Button className="button button--black-line button--default modal-price-status__btn-cancel" content="Cancel" />
-              <Button className="button button--black button--default modal-price-status__btn-bid" content="Bid Now" type="type1" />
+            <div className="modal-dao-voting__footer">
+              <Button className="button button--black-line button--mid modal-dao-voting__btn-cancel" content="Cancel" />
+              <Button className="button button--black button--mid modal-dao-voting__btn-confirm" content="Bid Now" type="type1" />
             </div>
           </InfoCard>
         </div>
@@ -110,4 +110,4 @@ function DaoVotingDetail02() {
   );
 }
 
-export default DaoVotingDetail02;
+export default DaoVotingDetailModal1;
