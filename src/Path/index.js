@@ -12,6 +12,7 @@ function Path() {
     ['', 'DAO Voting - Detail - Curation Results', '/art-dao/dao-voting/curation-results'],
     ['', 'DAO Voting - Results', '/art-dao/dao-voting/results'],
     ['', 'DAO Voting - Detail - Modal 2', '/art-dao/dao-voting/detail-modal-2'],
+    ['MarketPlace', 'Digital Art 1', '/marketplace/digital-art-1'],
   ];
   return (
     <div>

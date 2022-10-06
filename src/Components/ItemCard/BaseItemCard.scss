@@ -117,4 +117,31 @@
       color: #000;
     }
   }
+
+  &--soldout {
+    .itemcard__img,
+    .itemcard__content {
+      opacity: .6;
+    }
+
+    .itemcard__time-tag {
+      display: none;
+    }
+  }
+
+  &__soldout-msg {
+    @include RotaB;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: calc(118% - 69px);
+    width: 100%;
+    font-size: 24px;
+    line-height: 69px;
+    font-style: normal;
+    height: 69px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(113.33deg, #000 34.93%, #555 97.4%);
+  }
 }

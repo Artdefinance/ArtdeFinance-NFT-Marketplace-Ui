@@ -9,6 +9,7 @@ function ArtItemCard({
   sellType,
   priceValue,
   coinPriceValue,
+  isSoldOut,
 }) {
   return (
     <BaseItemCard
@@ -16,6 +17,7 @@ function ArtItemCard({
       imageUrl={imageUrl}
       title={title}
       description={description}
+      isSoldOut={isSoldOut}
     >
       <div className="itemcard__price">
         <span className="itemcard__price-sell">{sellType}</span>
@@ -33,6 +35,7 @@ ArtItemCard.defaultProps = {
   sellType: '',
   priceValue: '',
   coinPriceValue: '',
+  isSoldOut: false,
 };
 
 ArtItemCard.propTypes = {
@@ -42,6 +45,7 @@ ArtItemCard.propTypes = {
   sellType: PropTypes.string,
   priceValue: PropTypes.string,
   coinPriceValue: PropTypes.string,
+  isSoldOut: PropTypes.bool,
 };
 
 export default ArtItemCard;

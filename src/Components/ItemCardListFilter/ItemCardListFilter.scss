@@ -1,0 +1,147 @@
+@import '../../assets/css/Mixins.scss';
+
+.itemcard-list-filter {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &__btn-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 333px;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    margin-right: auto;
+
+    span {
+      @include RotaB;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #000;
+      display: inline-block;
+      width: calc(100% - 24px);
+    }
+
+    // arrow
+    &:after {
+      display: inline-block;
+      position: absolute;
+      right: 27px;
+      width: 7px;
+      height: 7px;
+      margin-top: -5px;
+      border-top: 2px solid #555;
+      border-right: 2px solid #555;
+      transform: rotate(135deg);
+      transform-origin: 50%;
+      content: '';
+    }
+  }
+
+  &--visible &__btn-toggle:after {
+    margin-top: 5px;
+    transform: rotate(-45deg);
+  }
+
+  &__results {
+    @include AcuminproM;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #888;
+    margin-left: 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &--filter-hidden {
+      .itemcard-list-filter__options {
+        display: none;
+      }
+    }
+  }
+
+  &__options {
+    box-sizing: border-box;
+    min-width: 333px;
+    margin-right: 36px;
+    padding: 0 20px;
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 15px 40px rgba(187, 187, 187, 0.15);
+    transition: opacity 0.5s linear;
+  }
+
+  &__keyword {
+    position: relative;
+    display: block;
+    margin: -6px 0 18px;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 11px;
+      transform: translateY(-50%);
+
+      path {
+        fill: #000;
+      }
+    }
+  }
+
+  &__keyword-input {
+    @include RotaM;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px 12px 39px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    border: 0;
+  }
+
+  &__btn-more {
+    @include AcuminproM;
+    margin: 18px 0 15px;
+    font-size: 14px;
+    color: #6147ff;
+    align-self: flex-end;
+  }
+
+  .checkbox_wrap {
+    position: relative;
+    width: 100%;
+
+    .ico_chkbox {
+      position: absolute;
+      right: 0;
+      margin-right: 0;
+    }
+
+    label {
+      @include RotaSB;
+      font-size: 14px;
+      width: 100%;
+      color: #555;
+    }
+  }
+
+  .checkbox_wrap + .checkbox_wrap {
+    margin-top: 10px;
+  }
+}

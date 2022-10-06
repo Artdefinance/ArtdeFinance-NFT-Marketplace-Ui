@@ -26,6 +26,7 @@
     right: 21px;
     width: 7px;
     height: 7px;
+    margin-top: -5px;
     border-top: 2px solid #555555;
     border-right: 2px solid #555555;
     transform: rotate(135deg);
@@ -35,6 +36,7 @@
   &__title span {
     padding-right: 20px;
     @include ellipse(1);
+    @include RotaSB;
   }
 
   &__title-icon {
@@ -97,7 +99,8 @@
 .dropdown__list.active {
   overflow-y: scroll;
   height: auto;
-  max-height: 203px;
+  margin-top: 10px;
+  max-height: 225px;
   padding: 11px;
   z-index: 9;
 }
@@ -106,6 +109,7 @@
   border: 2px solid #5F44FF;
 
   &::before {
+    margin-top: 5px;
     transform: rotate(-45deg);
   }
 }
@@ -114,7 +118,7 @@
   .dropdown__title::before {
     width: 0;
     height: 0;
-    border-color: #DDDDDD transparent transparent; 
+    border-color: #555 transparent transparent; 
     border-style: solid; 
     border-width: 7px 5px 0; 
     transform: rotate(0);
@@ -127,7 +131,7 @@
   .dropdown__title.active::before {
     width: 0;
     height: 0;
-    border-color: #DDDDDD transparent transparent; 
+    border-color: #555 transparent transparent; 
     border-style: solid; 
     border-width: 7px 5px 0; 
     transform: rotate(180deg);

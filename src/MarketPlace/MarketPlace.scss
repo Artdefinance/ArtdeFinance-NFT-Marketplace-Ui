@@ -2,10 +2,10 @@
 
 .marketplace {
   min-height: 1080px;
+  margin-bottom: 90px;
 
   &__wrap {
     max-width: 1440px;
-    padding-top: 60px;
     margin: 0 auto;
   }
 
@@ -15,17 +15,15 @@
     clear: both;
   }
 
-  h2 {
-    padding-top: 50px;
-    padding-bottom: 80px;
+  &__title {
+    padding: 90px 0 102px;
     font-size: 64px;
-    line-height: 1;
+    line-height: 1.5;
     @include RotaB;
   }
 
   .pagenation {
-    margin-top: 30px;
-    margin-bottom: 157px;
+    margin-top: -40px;
     justify-content: flex-end;
   }
 

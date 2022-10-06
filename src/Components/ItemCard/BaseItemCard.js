@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import './BaseItemCard.scss';
 
-function BaseItemCard({ className, imageUrl, title, description, children }) {
+function BaseItemCard({ className, imageUrl, title, description, isSoldOut, children }) {
   return (
-    <Link to="/path" className={clsx('itemcard', className)}>
+    <Link to="/path" className={clsx('itemcard', className, isSoldOut && 'itemcard--soldout')}>
       <div
         className="itemcard__img"
         style={{ backgroundImage: `url(${imageUrl})` }}
@@ -16,6 +16,9 @@ function BaseItemCard({ className, imageUrl, title, description, children }) {
         <span>38m</span>
         <span>52s</span>
       </em>
+      {isSoldOut && (
+        <em className="itemcard__soldout-msg">SOLD OUT</em>
+      )}
       <div className="itemcard__content">
         <p className="itemcard__title">{title}</p>
         <p className="itemcard__desc">{description}</p>
@@ -30,6 +33,7 @@ BaseItemCard.defaultProps = {
   imageUrl: '',
   title: '',
   description: '',
+  isSoldOut: false,
   children: '',
 };
 
@@ -38,6 +42,7 @@ BaseItemCard.propTypes = {
   imageUrl: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
+  isSoldOut: PropTypes.bool,
   children: PropTypes.node,
 };
 
