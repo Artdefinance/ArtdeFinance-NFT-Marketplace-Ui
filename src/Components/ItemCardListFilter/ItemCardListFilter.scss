@@ -67,7 +67,8 @@
     align-items: flex-start;
 
     &--filter-hidden {
-      .itemcard-list-filter__options {
+      .itemcard-list-filter__options,
+      .itemcard-list-filter__selected {
         display: none;
       }
     }
@@ -143,5 +144,46 @@
 
   .checkbox_wrap + .checkbox_wrap {
     margin-top: 10px;
+  }
+
+  &__selected {
+    display: flex;
+    justify-content: flext-start;
+    margin-bottom: 15px;
+
+    &-items {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: calc(100% - 56px);
+    }
+
+    &-item {
+      @include RotaSB;
+      font-size: 14px;
+      line-height: 48px;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 0 15px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+
+      svg {
+        position: relative;
+        left: 1px;
+      }
+    }
+  }
+
+  &__btn-clear-selected {
+    @include RotaEB;
+    font-size: 16px;
+    line-height: 50px;
+    color: #000;
+    width: 56px;
+    height: 50px;
+    background: transparent;
   }
 }

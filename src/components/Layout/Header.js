@@ -1,18 +1,20 @@
 import './Header.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Button from '../Button/Button';
 import Icons from '../Icons/Icons';
 
 function Header() {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const profileImg = 'https://source.unsplash.com/random/128x128/?profile';
   const [auth, setAuth] = useState(true);
-  let headType = '';
-  if (location.pathname === '/gallery/confirm') {
-    headType = 'head_white';
-  }
+  const headType = pathname === '/gallery/confirm' ? 'head_white' : '';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className={`head_wrap ${headType}`}>
       <div className="inner">

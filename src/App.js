@@ -13,6 +13,8 @@ import DetailModal2 from './ArtDao/DAOVoting/DetailModal2';
 import ArteComponents from './ArteComponent/Components';
 import MarketPlace from './MarketPlace/MarketPlace';
 import MarketPlaceDigitalArt1 from './MarketPlace/DigitalArt1';
+import MarketPlaceDigitalArt2 from './MarketPlace/DigitalArt2';
+import MarketPlaceDigitalArt3 from './MarketPlace/DigitalArt3';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path="/art-dao/dao-voting/detail-modal-2" element={<DetailModal2 />} />
           <Route path="/marketplace" element={<MarketPlace />} />
           <Route path="/marketplace/digital-art-1" element={<MarketPlaceDigitalArt1 />} />
+          <Route path="/marketplace/digital-art-2" element={<MarketPlaceDigitalArt2 />} />
+          <Route path="/marketplace/digital-art-3" element={<MarketPlaceDigitalArt3 />} />
         </Routes>
         <Footer />
       </BrowserRouter>

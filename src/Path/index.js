@@ -12,8 +12,12 @@ function Path() {
     ['', 'DAO Voting - Detail - Curation Results', '/art-dao/dao-voting/curation-results'],
     ['', 'DAO Voting - Results', '/art-dao/dao-voting/results'],
     ['', 'DAO Voting - Detail - Modal 2', '/art-dao/dao-voting/detail-modal-2'],
-    ['MarketPlace', 'Digital Art 1', '/marketplace/digital-art-1'],
+    ['Market Place', 'Digital Art 1', '/marketplace/digital-art-1'],
+    ['', 'Digital Art 2', '/marketplace/digital-art-2'],
+    ['', 'Digital Art 3', '/marketplace/digital-art-3'],
+    ['Market Place', 'Market Place', '/marketplace'],
   ];
+
   return (
     <div>
       <div className="pathGuide">

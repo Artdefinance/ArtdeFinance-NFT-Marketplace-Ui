@@ -48,7 +48,7 @@ function Footer() {
         </div>
         <div className="footer-info">
           <div className="footer-company">
-            <Link to="/" className="footer-company__logo">
+            <Link to="/path" className="footer-company__logo">
               <span className="a11y">ARTDE FINANCE</span>
             </Link>
             <p className="footer-message">

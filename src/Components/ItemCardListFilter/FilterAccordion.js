@@ -5,7 +5,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import clsx from 'clsx';
-import Icons from '../../Icons/Icons';
+import Icons from '../Icons/Icons';
 
 const useStyles = makeStyles(() => ({
   root: {

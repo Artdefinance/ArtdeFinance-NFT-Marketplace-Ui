@@ -6,7 +6,7 @@ import {
 } from '../Components/ItemCardListFilter';
 import Pagenation from '../Components/Pagenation/Pagenation';
 
-function DigitalArt1() {
+function DigitalArt3() {
   const imageUrl = 'https://source.unsplash.com/random/666x786/?art';
   const [isFilterVisible, setFilterVisible] = useState(true);
   const onClickToggleButton = () => {
@@ -20,7 +20,10 @@ function DigitalArt1() {
         <FilterListContainer
           isFilterVisible={isFilterVisible}
           onClickToggleButton={onClickToggleButton}
+          filterCount={3}
           resultCount="10,000"
+          defaultCheckedIds={['status1', 'sale2', 'artist1']}
+          selectedFilters={['For Sale', 'On Auction', 'Tai-Shan Schierenberg', 'For Sale', 'On Auction', 'Tai-Shan Schieren adiwnflas w jfks qeberg', 'Tai-Shan Schierenberg', 'On Auction', 'For Sale']}
         >
           <ItemCardList>
             {Array.from(Array(12)).map((_, index) => (
@@ -43,4 +46,4 @@ function DigitalArt1() {
   );
 }
 
-export default DigitalArt1;
+export default DigitalArt3;
