@@ -33,7 +33,7 @@ function Path() {
     ['', 'Owned', '/personal-collected/owned'],
     ['', 'Favorited', '/personal-collected/favorited'],
     ['', 'Activity', '/personal-collected/activity'],
-    ['', 'Owned Empty', '/personal-collected/owned-empty'],
+    ['', 'Owned Empty + 프로필 레이어', '/personal-collected/owned-empty'],
   ];
 
   return (

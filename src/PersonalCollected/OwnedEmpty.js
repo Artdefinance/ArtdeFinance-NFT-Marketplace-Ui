@@ -5,7 +5,7 @@ import ItemCardList from '../Components/ItemCardList';
 import {
   FilterListContainer,
 } from '../Components/ItemCardListFilter';
-import Pagenation from '../Components/Pagenation/Pagenation';
+import UserInfo from '../Components/UserInfo';
 import './PersonalCollected.scss';
 
 function OwnedEmpty() {
@@ -17,6 +17,7 @@ function OwnedEmpty() {
 
   return (
     <div className="personal-collected personal-collected-owned">
+      <UserInfo />
       <CollectionHead
         profileImageUrl={profileImageUrl}
         name="YVONNE BAR |1 ╳ 55| NFT PRID E& XCA"
@@ -40,7 +41,6 @@ function OwnedEmpty() {
         >
           <ItemCardList isEmpty />
         </FilterListContainer>
-        <Pagenation isProgressVisible />
       </div>
     </div>
   );
