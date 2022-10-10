@@ -7,4 +7,11 @@
   &--compact {
     padding: 20px 40px;
   }
+
+  &--transparent {
+    background: transparent;
+    box-shadow: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
 }

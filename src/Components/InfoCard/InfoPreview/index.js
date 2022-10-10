@@ -5,7 +5,9 @@ import './InfoPreview.scss';
 function InfoPreview({ imageUrl }) {
   return (
     <div className="infocard-preview">
-      <div className="infocard-preview__img" style={{ backgroundImage: `url(${imageUrl})` }} />
+      <span className="infocard-preview__img">
+        <img src={imageUrl} alt="" />
+      </span>
       <button type="button" className="infocard-preview__btn-view">
         <Icons shape="expand" />
         <span>View Image</span>

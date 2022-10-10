@@ -18,6 +18,10 @@
     box-shadow: 0px 1px 3px 0px #00000014;
     box-sizing: border-box;
     @include RotaR;
+
+    svg {
+      vertical-align: middle;
+    }
   }
 
   &__title::before {
@@ -75,6 +79,10 @@
     transition: .3s ease;
     @include ellipse(1);
     @include RotaR;
+
+    svg {
+      vertical-align: middle;
+    }
   }
 
   &__item:hover {

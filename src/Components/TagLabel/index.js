@@ -4,7 +4,7 @@ import './TagLabel.scss';
 
 function TagLabel({ children, type }) {
   return (
-    <em className={clsx('tag-label', `tag-label--${type}`)}>{children}</em>
+    <em className={clsx('tag-label', !!type && `tag-label--${type}`)}>{children}</em>
   );
 }
 
@@ -15,7 +15,7 @@ TagLabel.defaultProps = {
 
 TagLabel.propTypes = {
   children: PropTypes.string,
-  type: PropTypes.oneOf(['', 'live']),
+  type: PropTypes.oneOf(['', 'live', 'compact']),
 };
 
 export default TagLabel;

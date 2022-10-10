@@ -20,4 +20,290 @@
     margin-top: -40px;
     justify-content: flex-end;
   }
+
+  &__btn-readmore {
+    width: 167px;
+    margin: 30px auto 20px;
+  }
+  
+  &__btn-seemore {
+    @include AcuminproM;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.011em;
+    margin-top: 20px;
+    color: #366dfc;
+    align-self: flex-start;
+  }
+  
+  .breadcrumbs {
+    margin: 10px 0 61px;
+  }
+
+  &-auction {
+    .infocard > .infocard-title:first-child {
+      margin-top: 18px;
+    }
+
+    &__subtitle {
+      @include RotaB;
+      font-size: 42px;
+      line-height: 1;
+      color: #000;
+      text-align: center;
+      margin: 53px 0 39px;
+    }
+  }
+
+  .infotable {
+    margin-top: 10px;
+
+    .tag-label {
+      margin-bottom: 11px;
+    }
+
+    .text1, .text2, .text3 {
+      @include RotaB;
+      font-size: 16px;
+      line-height: 1;
+      color: #555;
+    }
+
+    .text2, .text3 {
+      line-height: 1.2;
+    }
+
+    .text2 {
+      color: #000;
+    }
+
+    .text3 {
+      color: #888;
+    }
+
+    .text4 {
+      @include AcuminproM;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #888;
+    }
+
+    .text5 {
+      @include AcuminproM;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #366dfc;
+      display: inline-block;
+      width: 100%;
+      text-align: right;
+
+      svg {
+        position: relative;
+        top: 4px;
+        margin-left: 2px;
+      }
+    }
+
+    .tac {
+      text-align: center;
+    }
+
+    .padded {
+      padding-top: 33px;
+      line-height: 1;
+    }
+
+    .padded2 {
+      padding-top: 22px;
+      line-height: 1;
+    }
+
+    .padded3 {
+      padding-top: 28px;
+      line-height: 1;
+    }
+    
+    .btn-cancel {
+      @include RotaB;
+      width: 80px;
+      height: 30px;
+      border: 1px solid #000000;
+      border-radius: 15px;
+      font-size: 15px;
+      line-height: 28px;
+      color: #000;
+      background: #fff;
+    }
+
+    .btn-canceled {
+      @include RotaB;
+      width: 80px;
+      height: 30px;
+      border: 0;
+      border-radius: 15px;
+      font-size: 15px;
+      line-height: 28px;
+      color: #ff3b30;
+      background: rgba(255, 59, 48, 0.15);
+    }
+  }
+
+  &-modal {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+
+    .infocard-subtitle {
+      color: #888;
+      margin-bottom: 13px;
+    }
+
+    &__content {
+      width: 702px;
+      margin-top: 86px;
+    }
+
+    &__title {
+      @include RotaB;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #000;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    &__price-cv {
+      @include RotaSB;
+      font-size: 16px;
+      line-height: 1;
+      color: #888;
+      text-align: right;
+      margin: 10px 0 16px;
+    }
+
+    &__balance {
+      @include RotaEB;
+      font-size: 20px;
+      line-height: 1;
+      color: #000;
+      display: flex;
+      flex-direction: row;
+      margin-top: 3px;
+
+      .infocard-subtitle {
+        margin-right: auto;
+      }
+
+      .infocard-currency-tag {
+        margin-left: 15px;
+      }
+    }
+
+    &__total {
+      @include RotaSB;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      height: 20px;
+      margin-top: 22px;
+      padding: 10px 19px;
+      background: linear-gradient(134.7deg, #5f44ff 25.13%, #d5c0ff 110.67%);
+      box-shadow: 0px 5px 15px rgba(5, 16, 55, 0.1), inset -1px -1px 2px #412ac9, inset 1px 1px 2px #c9beff;
+      border-radius: 5px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+      strong {
+        @include RotaEB;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0 20px;
+
+      .button:first-child {
+        width: 200px;
+      }
+
+      .button:nth-child(2) {
+        width: 395px;
+      }
+    }
+
+    &__btn-confirm,
+    &__btn-cancel {
+      width: 390px;
+      margin: 30px auto 20px;
+    }
+
+    .radiobox {
+      margin: 6px 0 39px;
+    }
+
+    &__starting {
+      display: flex;
+      justify-self: space-between;
+      margin-bottom: 30px;
+
+      &-input {
+        @include RotaM;
+        font-size: 24px;
+        line-height: 1;
+        color: #bbb;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: right;
+        padding: 0 27px;
+        margin-left: 22px;
+        flex: 1;
+
+        &::placeholder {
+          color: #bbb;
+        }
+    
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+
+    &__fee {
+      padding: 17px 0;
+      margin-bottom: 30px;
+      border: 1px solid #f0f0f0;
+      border-width: 1px 0;
+
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & + & {
+          margin-top: 7px;
+        }
+
+        .infocard-subtitle {
+          margin: auto;
+          margin-left: 0;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &-per {
+        @include RotaB;
+        font-size: 18px;
+        line-height: 1;
+      }
+    }
+  }
 }

@@ -683,6 +683,8 @@ function ArteComponents() {
         <TagLabel type="live">Live</TagLabel>
         <br />
         <TagLabel>Selected</TagLabel>
+        <br />
+        <TagLabel type="compact">Selected</TagLabel>
       </div>
       {/* TagLabel */}
 

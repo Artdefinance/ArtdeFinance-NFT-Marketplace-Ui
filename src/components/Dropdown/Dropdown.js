@@ -13,6 +13,21 @@ export default class Dropdown extends React.Component {
     this.handleClick2 = this.handleClick2.bind(this);
   }
 
+  componentDidMount() {
+    const { content, defaultSelectedId } = this.props;
+
+    if (!content || !defaultSelectedId) return;
+
+    const defaultSelected = content.find(({ id }) => id === defaultSelectedId);
+
+    if (defaultSelected) {
+      this.setState((prevState) => ({
+        ...prevState,
+        getDropTitle: defaultSelected.title,
+      }));
+    }
+  }
+
   handleClick() {
     this.setState((prevState) => ({
       isToggleOn: !prevState.isToggleOn,
@@ -20,8 +35,13 @@ export default class Dropdown extends React.Component {
   }
 
   handleClick2(e) {
+    const { content } = this.props;
+    const selected = content.find(({ id }) => id === e.currentTarget.dataset.id);
+
+    if (!selected) return;
+
     this.setState((prevState) => ({
-      getDropTitle: e.target.innerText,
+      getDropTitle: selected.title,
       isToggleOn: !prevState.isToggleOn,
     }));
   }
@@ -62,6 +82,7 @@ export default class Dropdown extends React.Component {
                 type="button"
                 className="dropdown__item"
                 key={items.id}
+                data-id={items.id}
                 onClick={this.handleClick2}
               >
                 <span>{items.title}</span>

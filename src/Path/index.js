@@ -15,7 +15,17 @@ function Path() {
     ['Market Place', 'Digital Art 1', '/marketplace/digital-art-1'],
     ['', 'Digital Art 2', '/marketplace/digital-art-2'],
     ['', 'Digital Art 3', '/marketplace/digital-art-3'],
-    ['Market Place', 'Market Place', '/marketplace'],
+    ['', 'Market Place', '/marketplace'],
+    ['', 'Auction 1', '/marketplace/auction-1'],
+    ['', 'Auction 1 (종료)', '/marketplace/auction-1-end'],
+    ['', 'Auction 2/3', '/marketplace/auction-2-3'],
+    ['', 'Fixed Price 1', '/marketplace/fixed-price-1'],
+    ['', 'Fixed Price 2', '/marketplace/fixed-price-2'],
+    ['', 'Listing 1', '/marketplace/listing-1'],
+    ['', 'Listing 1 Modal', '/marketplace/listing-1-modal'],
+    ['', 'Listing 2', '/marketplace/listing-2'],
+    ['', 'Auction 4', '/marketplace/auction-4'],
+    ['', 'Auction 4 Modal', '/marketplace/auction-4-modal'],
   ];
 
   return (

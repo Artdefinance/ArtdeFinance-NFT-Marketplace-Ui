@@ -1,0 +1,56 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-preview-complete {
+  text-align: center;
+
+  &__img {
+    display: inline-block;
+    max-width: 100%;
+    background: #d9d9d9;
+    border-radius: 10px;
+    margin: 30px auto;
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  &__msg {
+    @include RotaM;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    margin-bottom: 30px;
+    max-width: 454px;
+    margin: 0 auto;
+    text-align: center;
+    
+    em {
+      @include RotaSB;
+      display: inline-block;
+      line-height: 1;
+      font-style: normal;
+      color: #5f44ff;
+    }
+  }
+
+  &__tran {
+    @include RotaSB;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    border: 1px solid #f0f0f0;
+    border-width: 1px 0;
+    padding: 30px 0;
+    margin-top: 30px;
+
+    em {
+      @include RotaSB;
+      line-height: 1;
+      font-style: normal;
+      color: #5f44ff;
+      margin-left: 12px;
+    }
+  }
+}
