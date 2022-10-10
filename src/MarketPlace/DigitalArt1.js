@@ -21,6 +21,7 @@ function DigitalArt1() {
           isFilterVisible={isFilterVisible}
           onClickToggleButton={onClickToggleButton}
           resultCount="10,000"
+          filterType="digital-art"
         >
           <ItemCardList>
             {Array.from(Array(12)).map((_, index) => (

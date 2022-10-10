@@ -25,6 +25,9 @@ import MarketPlaceListing1Modal from './MarketPlace/Listing1Modal';
 import MarketPlaceListing2 from './MarketPlace/Listing2';
 import MarketPlaceAuction4 from './MarketPlace/Auction4';
 import MarketPlaceAuction4Modal from './MarketPlace/Auction4Modal';
+import CollectionItem from './Collection/Item';
+import CollectionItemEmpty from './Collection/ItemEmpty';
+import CollectionActivity from './Collection/Activity';
 
 function App() {
   return (
@@ -56,6 +59,10 @@ function App() {
           <Route path="/marketplace/listing-2" element={<MarketPlaceListing2 />} />
           <Route path="/marketplace/auction-4" element={<MarketPlaceAuction4 />} />
           <Route path="/marketplace/auction-4-modal" element={<MarketPlaceAuction4Modal />} />
+          <Route path="/marketplace/auction-4-modal" element={<MarketPlaceAuction4Modal />} />
+          <Route path="/collection/item" element={<CollectionItem />} />
+          <Route path="/collection/item-empty" element={<CollectionItemEmpty />} />
+          <Route path="/collection/activity" element={<CollectionActivity />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -1,11 +1,54 @@
 @import '../../assets/css/Mixins.scss';
 
 .itemcard-list-filter {
+  min-height: 675px;
+
   &__header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 30px;
+
+    &-keyword {
+      position: relative;
+      display: block;
+      width: 701px;
+      height: 60px;
+      margin-right: 39px;
+  
+      &-search {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        width: 24px;
+        height: 24px;
+        transform: translateY(-50%);
+  
+        path {
+          fill: #000;
+        }
+      }
+    }
+
+    &-keyword-input {
+      @include RotaM;
+      font-size: 16px;
+      line-height: 16px;
+      color: #888;
+      box-sizing: border-box;
+      width: 100%;
+      height: 60px;
+      padding: 0 42px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      background: #fff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+
+      &::placeholder {
+        color: #888;
+      }
+    }
   }
 
   &__btn-toggle {
@@ -65,6 +108,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    &-content {
+      width: 100%;
+    }
 
     &--filter-hidden {
       .itemcard-list-filter__options,
@@ -139,6 +186,7 @@
       font-size: 14px;
       width: 100%;
       color: #555;
+      cursor: pointer;
     }
   }
 
@@ -185,5 +233,20 @@
     width: 56px;
     height: 50px;
     background: transparent;
+  }
+
+  &__btn-update {
+    @include RotaB;
+    font-size: 16px;
+    line-height: 1;
+    color: #888;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 9px;
+
+    svg {
+      margin-left: 7px;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import '../../assets/css/Mixins.scss';
+
 .itemcard-list {
   display: flex;
   margin: -70px -18px 0;
@@ -5,5 +7,24 @@
 
   .itemcard {
     margin: 70px 18px;
+  }
+
+  &--empty {
+    width: 100%;
+    margin: 44px auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__empty-msg {
+    @include RotaB;
+    font-size: 20px;
+    line-height: 1;
+    color: #000;
+    margin-bottom: 46px;
+  }
+
+  &__btn-empty-back {
+    width: 400px;
   }
 }

@@ -24,6 +24,7 @@ function DigitalArt2() {
           resultCount="10,000"
           defaultCheckedIds={['status1', 'sale2', 'artist1']}
           selectedFilters={['For Sale', 'On Auction', 'Tai-Shan Schierenberg']}
+          filterType="digital-art"
         >
           <ItemCardList>
             {Array.from(Array(12)).map((_, index) => (

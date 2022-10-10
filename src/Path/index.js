@@ -26,6 +26,9 @@ function Path() {
     ['', 'Listing 2', '/marketplace/listing-2'],
     ['', 'Auction 4', '/marketplace/auction-4'],
     ['', 'Auction 4 Modal', '/marketplace/auction-4-modal'],
+    ['Collection', 'Item', '/collection/item'],
+    ['', 'Item Empty', '/collection/item-empty'],
+    ['', 'Activity', '/collection/activity'],
   ];
 
   return (
