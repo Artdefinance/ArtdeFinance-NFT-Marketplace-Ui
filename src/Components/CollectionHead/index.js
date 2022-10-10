@@ -16,9 +16,7 @@ function CollectionHead({
 
   return (
     <div className="collection-head">
-      {backgroundImageUrl && (
-        <div className="collection-head__bg" style={{ backgroundImage: `url(${backgroundImageUrl})` }} />
-      )}
+      <div className="collection-head__bg" style={backgroundImageUrl ? { backgroundImage: `url(${backgroundImageUrl})` } : {}} />
       <div className="collection-head__inner">
         <div className="collection-head__profile-img">
           <img src={profileImageUrl} alt="" />

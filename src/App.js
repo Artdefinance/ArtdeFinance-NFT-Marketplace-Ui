@@ -28,6 +28,11 @@ import MarketPlaceAuction4Modal from './MarketPlace/Auction4Modal';
 import CollectionItem from './Collection/Item';
 import CollectionItemEmpty from './Collection/ItemEmpty';
 import CollectionActivity from './Collection/Activity';
+import PersonalCollectedCollections from './PersonalCollected/Collections';
+import PersonalCollectedOwned from './PersonalCollected/Owned';
+import PersonalCollectedFavorited from './PersonalCollected/Favorited';
+import PersonalCollectedActivity from './PersonalCollected/Activity';
+import PersonalCollectedOwnedEmpty from './PersonalCollected/OwnedEmpty';
 
 function App() {
   return (
@@ -63,6 +68,11 @@ function App() {
           <Route path="/collection/item" element={<CollectionItem />} />
           <Route path="/collection/item-empty" element={<CollectionItemEmpty />} />
           <Route path="/collection/activity" element={<CollectionActivity />} />
+          <Route path="/personal-collected/collections" element={<PersonalCollectedCollections />} />
+          <Route path="/personal-collected/owned" element={<PersonalCollectedOwned />} />
+          <Route path="/personal-collected/favorited" element={<PersonalCollectedFavorited />} />
+          <Route path="/personal-collected/activity" element={<PersonalCollectedActivity />} />
+          <Route path="/personal-collected/owned-empty" element={<PersonalCollectedOwnedEmpty />} />
         </Routes>
         <Footer />
       </BrowserRouter>

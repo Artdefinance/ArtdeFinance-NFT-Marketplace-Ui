@@ -29,6 +29,11 @@ function Path() {
     ['Collection', 'Item', '/collection/item'],
     ['', 'Item Empty', '/collection/item-empty'],
     ['', 'Activity', '/collection/activity'],
+    ['Personal Collected', 'Collections', '/personal-collected/collections'],
+    ['', 'Owned', '/personal-collected/owned'],
+    ['', 'Favorited', '/personal-collected/favorited'],
+    ['', 'Activity', '/personal-collected/activity'],
+    ['', 'Owned Empty', '/personal-collected/owned-empty'],
   ];
 
   return (

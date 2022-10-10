@@ -3,6 +3,8 @@
   margin: 5px 0 38px;
 
   &--bordered {
+    margin-bottom: 30px;
+
     &:before {
       position: absolute;
       left: calc((100vw - 1440px) / -2);
