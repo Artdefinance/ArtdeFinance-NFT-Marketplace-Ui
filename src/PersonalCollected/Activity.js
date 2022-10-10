@@ -13,6 +13,7 @@ import {
   CollectionTablePriceCell,
   CollectionTableRow,
 } from '../Components/CollectionTable';
+import UserInfo from '../Components/UserInfo';
 import './PersonalCollected.scss';
 
 function Activity() {
@@ -25,6 +26,7 @@ function Activity() {
 
   return (
     <div className="personal-collected personal-collected-activity">
+      <UserInfo />
       <CollectionHead
         profileImageUrl={profileImageUrl}
         name="YVONNE BAR |1 ╳ 55| NFT PRID E& XCA"
