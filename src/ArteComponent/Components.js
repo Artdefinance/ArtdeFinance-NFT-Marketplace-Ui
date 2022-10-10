@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ArteComponent.scss';
 // Carosel
 import Slider from 'react-slick';
@@ -253,7 +254,6 @@ function ArteComponents() {
       <link
         rel="stylesheet"
         type="text/css"
-        charSet="UTF-8"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
       />
       <link
