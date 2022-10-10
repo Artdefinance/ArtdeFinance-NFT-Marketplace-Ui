@@ -56,7 +56,7 @@ function Item() {
   };
 
   return (
-    <div className="collection marketplace-digital-art">
+    <div className="collection">
       <CollectionHead
         backgroundImageUrl={backgroundImageUrl}
         profileImageUrl={profileImageUrl}
