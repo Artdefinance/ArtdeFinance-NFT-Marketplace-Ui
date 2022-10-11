@@ -1,7 +1,8 @@
-import { useId } from 'react';
+import { useState, useId } from 'react';
 import Modal from '@material-ui/core/Modal';
 import { InfoCard } from '../Components/InfoCard';
 import ConfirmCheckbox from '../Components/Inputs/ConfirmCheckbox';
+import Button from '../Components/Button/Button';
 import Auction4 from './Auction4';
 
 function Auction4Modal() {
@@ -14,16 +15,18 @@ function Auction4Modal() {
       WebkitBackdropFilter: 'blur(6px)',
     },
   };
+  const [hide, hideModal] = useState(false);
 
   return (
     <>
       <Auction4 />
       <Modal
-        open
+        open={!hide}
         className="marketplace-modal"
         aria-labelledby={labelId}
         aria-describedby={describeId}
         BackdropProps={backdropProps}
+        onClose={() => hideModal(true)}
       >
         <div className="marketplace-modal__content">
           <InfoCard compact>
@@ -33,7 +36,7 @@ function Auction4Modal() {
               name="Confirm Cancelation"
               description="You’ll be asked to review and confirm this offer from your wallet."
             />
-            <button className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" type="button">Cancel</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
           </InfoCard>
         </div>
       </Modal>

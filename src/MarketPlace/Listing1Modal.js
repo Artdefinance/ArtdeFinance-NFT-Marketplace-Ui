@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useState, useId } from 'react';
 import Modal from '@material-ui/core/Modal';
 import {
   InfoArtSummary,
@@ -10,6 +10,7 @@ import {
 import ConfirmCheckbox from '../Components/Inputs/ConfirmCheckbox';
 import RadioBox from '../Components/Inputs/RadioBox';
 import Dropdown from '../Components/Dropdown/Dropdown';
+import Button from '../Components/Button/Button';
 import IconStyle from '../Components/Icons/Icons';
 import Listing1 from './Listing1';
 
@@ -24,6 +25,7 @@ function Listing1Modal() {
       WebkitBackdropFilter: 'blur(6px)',
     },
   };
+  const [hide, hideModal] = useState(false);
   const priceTypes = [
     {
       id: '1',
@@ -63,11 +65,12 @@ function Listing1Modal() {
     <>
       <Listing1 />
       <Modal
-        open
+        open={!hide}
         className="marketplace-modal"
         aria-labelledby={labelId}
         aria-describedby={describeId}
         BackdropProps={backdropProps}
+        onClose={() => hideModal(true)}
       >
         <div className="marketplace-modal__content">
           <InfoCard compact>
@@ -89,8 +92,8 @@ function Listing1Modal() {
             <InfoSubtitle>Duration</InfoSubtitle>
             <Dropdown dropWidth="100%" dropHeight="80px" dropTitle="Duration" content={durations} defaultSelectedId="1" dropFontSize="24px" dropFontColor="#bbb" />
             <div className="marketplace-modal__buttons">
-              <button className="button button--black-line button--mid button--type1" type="button">Cancel</button>
-              <button className="button button--black button--mid button--type1" type="button">Complete Purchase</button>
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" />
             </div>
           </InfoCard>
 
@@ -113,8 +116,8 @@ function Listing1Modal() {
               <input type="number" className="marketplace-modal__starting-input" min="0" step="0.01" placeholder="0.00" />
             </div>
             <div className="marketplace-modal__buttons">
-              <button className="button button--black-line button--mid button--type1" type="button">Cancel</button>
-              <button className="button button--black button--mid button--type1" type="button">Complete Purchase</button>
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" />
             </div>
           </InfoCard>
 
@@ -134,7 +137,7 @@ function Listing1Modal() {
               name="Confirm listing"
               description="You’ll be asked to review and confirm this offer from your wallet."
             />
-            <button className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" type="button">Cancel</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
           </InfoCard>
 
           <hr />
@@ -157,7 +160,7 @@ function Listing1Modal() {
               name="Confirm listing"
               description="You’ll be asked to review and confirm this offer from your wallet."
             />
-            <button className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" type="button">Cancel</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
           </InfoCard>
 
           <hr />
@@ -176,7 +179,7 @@ function Listing1Modal() {
                 </>
               )}
             />
-            <button className="button button--black button--mid button--type1 marketplace-modal__btn-confirm" type="button">View Lisitng</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1 marketplace-modal__btn-confirm" content="View Lisitng" />
           </InfoCard>
         </div>
       </Modal>

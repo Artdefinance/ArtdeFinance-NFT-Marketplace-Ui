@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useState, useId } from 'react';
 import Modal from '@material-ui/core/Modal';
 import {
   InfoArtSummary,
@@ -8,6 +8,7 @@ import {
 } from '../Components/InfoCard';
 import ConfirmCheckbox from '../Components/Inputs/ConfirmCheckbox';
 import FixedPrice1 from './FixedPrice1';
+import Button from '../Components/Button/Button';
 import IconStyle from '../Components/Icons/Icons';
 
 function FixedPrice2() {
@@ -20,6 +21,7 @@ function FixedPrice2() {
       WebkitBackdropFilter: 'blur(6px)',
     },
   };
+  const [hide, hideModal] = useState(false);
   const questionIcon = (
     <IconStyle shape="question" width={20} height={20} viewBox="0 0 20 20" color="#366DFC" />
   );
@@ -28,11 +30,12 @@ function FixedPrice2() {
     <>
       <FixedPrice1 />
       <Modal
-        open
+        open={!hide}
         className="marketplace-modal"
         aria-labelledby={labelId}
         aria-describedby={describeId}
         BackdropProps={backdropProps}
+        onClose={() => hideModal(true)}
       >
         <div className="marketplace-modal__content">
           <InfoCard compact>
@@ -66,8 +69,8 @@ function FixedPrice2() {
               <span className="infocard-currency-tag">MATIC</span>
             </div>
             <div className="marketplace-modal__buttons">
-              <button className="button button--black-line button--mid button--type1" type="button">Cancel</button>
-              <button className="button button--black button--mid button--type1" type="button">Complete Purchase</button>
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" />
             </div>
           </InfoCard>
 
@@ -111,8 +114,8 @@ function FixedPrice2() {
               + Gas fees
             </div>
             <div className="marketplace-modal__buttons">
-              <button className="button button--black-line button--mid button--type1" type="button">Cancel</button>
-              <button className="button button--black button--mid button--type1" type="button" disabled>Complete Purchase</button>
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" disabled />
             </div>
           </InfoCard>
 
@@ -133,7 +136,7 @@ function FixedPrice2() {
               )}
               transactionId="0x4461....2d63"
             />
-            <button className="button button--black button--mid button--type1 marketplace-modal__btn-confirm" type="button">Confirm</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1 marketplace-modal__btn-confirm" content="Confirm" />
           </InfoCard>
 
           <hr />
@@ -152,7 +155,7 @@ function FixedPrice2() {
               name="Confirm offer"
               description="You’ll be asked to review and confirm this offer from your wallet."
             />
-            <button className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" type="button">Cancel</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
           </InfoCard>
         </div>
       </Modal>

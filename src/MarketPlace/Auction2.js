@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useState, useId } from 'react';
 import Modal from '@material-ui/core/Modal';
 import {
   InfoArtSummary,
@@ -9,6 +9,7 @@ import {
 } from '../Components/InfoCard';
 import IconStyle from '../Components/Icons/Icons';
 import ConfirmCheckbox from '../Components/Inputs/ConfirmCheckbox';
+import Button from '../Components/Button/Button';
 import Auction1 from './Auction1';
 
 function Auction2() {
@@ -21,16 +22,18 @@ function Auction2() {
       WebkitBackdropFilter: 'blur(6px)',
     },
   };
+  const [hide, hideModal] = useState(false);
 
   return (
     <>
       <Auction1 />
       <Modal
-        open
+        open={!hide}
         className="marketplace-modal"
         aria-labelledby={labelId}
         aria-describedby={describeId}
         BackdropProps={backdropProps}
+        onClose={() => hideModal(true)}
       >
         <div className="marketplace-modal__content">
           <InfoCard compact>
@@ -64,8 +67,8 @@ function Auction2() {
               + Gas fees
             </div>
             <div className="marketplace-modal__buttons">
-              <button className="button button--black-line button--mid button--type1" type="button">Cancel</button>
-              <button className="button button--black button--mid button--type1" type="button" disabled>Auction Ended</button>
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" disabled content="Auction Ended" />
             </div>
           </InfoCard>
 
@@ -95,8 +98,8 @@ function Auction2() {
               <span className="infocard-currency-tag">MATIC</span>
             </div>
             <div className="marketplace-modal__buttons">
-              <button className="button button--black-line button--mid button--type1" type="button">Cancel</button>
-              <button className="button button--black button--mid button--type1" type="button" disabled>Bid Now</button>
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" disabled content="Bid Now" />
             </div>
           </InfoCard>
 
@@ -109,7 +112,7 @@ function Auction2() {
               name="Confirm Cancelation"
               description="You’ll be asked to review and confirm this offer from your wallet."
             />
-            <button className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" type="button">Cancel</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
           </InfoCard>
 
           <hr />
@@ -132,7 +135,7 @@ function Auction2() {
               name="Confirm offer"
               description="You’ll be asked to review and confirm this offer from your wallet."
             />
-            <button className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" type="button">Cancel</button>
+            <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
           </InfoCard>
         </div>
       </Modal>

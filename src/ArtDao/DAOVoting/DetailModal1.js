@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useState, useId } from 'react';
 import Modal from '@material-ui/core/Modal';
 import Detail from './Detail';
 import {
@@ -21,16 +21,18 @@ function DaoVotingDetailModal1() {
       WebkitBackdropFilter: 'blur(6px)',
     },
   };
+  const [hide, hideModal] = useState(false);
 
   return (
     <>
       <Detail />
       <Modal
         className="modal-dao-voting modal-price-status"
-        open
+        open={!hide}
         aria-labelledby={labelId}
         aria-describedby={describeId}
         BackdropProps={backdropProps}
+        onClose={() => hideModal(true)}
       >
         <div className="modal-dao-voting__content">
           <InfoCard>
@@ -100,8 +102,8 @@ function DaoVotingDetailModal1() {
               paying attention to him after his solo exhibition at Galerie Bart.
             </p>
             <div className="modal-dao-voting__footer">
-              <Button className="button button--black-line button--mid modal-dao-voting__btn-cancel" content="Cancel" />
-              <Button className="button button--black button--mid modal-dao-voting__btn-confirm" content="Bid Now" type="type1" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid modal-dao-voting__btn-cancel" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid modal-dao-voting__btn-confirm" content="Bid Now" type="type1" />
             </div>
           </InfoCard>
         </div>
