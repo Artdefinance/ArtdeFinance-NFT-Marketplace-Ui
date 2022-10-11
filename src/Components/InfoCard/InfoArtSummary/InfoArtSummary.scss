@@ -71,4 +71,35 @@
       align-self: flex-end;
     }
   }
+
+  &__list {
+    width: 100%;
+    padding-top: 17px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    & + & {
+      margin-top: 10px;
+    }
+  }
+
+  &__item-title {
+    @include RotaSB;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: auto;
+    color: #9f9f9f;
+  }
+
+  &__item-value {
+    @include RotaB;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    margin-left: 6px;
+  }
 }

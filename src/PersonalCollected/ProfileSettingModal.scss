@@ -1,14 +1,24 @@
 @import '../assets/css/Mixins.scss';
 
 .profile-setting-modal {
+  overflow: auto;
+
   .infocard-subtitle {
     color: #888;
+  }
+
+  .input {
+    margin: 6px auto 29px;
+  }
+
+  .textarea_box {
+    margin: 8px auto 25px;
   }
 
   &__content {
     position: relative;
     width: 702px;
-    margin: 86px auto 0;
+    margin: 86px auto;
     padding: 40px 0 73px;
     border: 1px solid #F4F4F4;
     border-radius: 10px;
@@ -84,41 +94,6 @@
       &::placeholder {
         color: #bbb;
       }
-    }
-  }
-
-  &__bio {
-    margin: 9px 0 26px;
-    padding: 7px 13px 13px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-
-    &-textarea {
-      @include AcuminproM;
-      display: block;
-      border: 0;
-      width: 100%;
-      height: 96px;
-      font-size: 16px;
-      line-height: 24px;
-      color: #000;
-      appearance: none;
-      resize: none;
-      box-shadow: none;
-
-      &::placeholder {
-        color: #bbb;
-      }
-    }
-
-    &-length {
-      @include AcuminproM;
-      font-size: 14px;
-      line-height: 1;
-      display: block;
-      margin-top: 4px;
-      text-align: right;
-      color: #888;
     }
   }
 

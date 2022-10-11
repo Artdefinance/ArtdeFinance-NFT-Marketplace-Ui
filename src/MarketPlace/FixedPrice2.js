@@ -115,7 +115,7 @@ function FixedPrice2() {
             </div>
             <div className="marketplace-modal__buttons">
               <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
-              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" disabled />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" disabled="true" />
             </div>
           </InfoCard>
 

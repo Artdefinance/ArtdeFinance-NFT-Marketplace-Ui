@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import IconStyle from '../../Icons/Icons';
 import './InfoArtSummary.scss';
 
-function InfoArtSummary({ imageUrl, title, author, listPrice, listPriceUSD }) {
+function InfoArtSummary({ imageUrl, title, author, listPrice, listPriceUSD, summaries }) {
+  const hasAdditionalSummary = summaries.length > 0;
   return (
     <div className="infocard-art-summary">
       <span className="infocard-art-summary__preview">
@@ -21,6 +22,16 @@ function InfoArtSummary({ imageUrl, title, author, listPrice, listPriceUSD }) {
             <div className="infocard-art-summary__list-price-cv">{listPriceUSD}</div>
           </>
         )}
+        {hasAdditionalSummary && (
+          <div className="infocard-art-summary__list">
+            {summaries.map(({ name, value }) => (
+              <div key={name} className="infocard-art-summary__item">
+                <span className="infocard-art-summary__item-title">{name}</span>
+                <span className="infocard-art-summary__item-value">{value}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -29,6 +40,7 @@ function InfoArtSummary({ imageUrl, title, author, listPrice, listPriceUSD }) {
 InfoArtSummary.defaultProps = {
   listPrice: '',
   listPriceUSD: '',
+  summaries: [],
 };
 
 InfoArtSummary.propTypes = {
@@ -37,6 +49,10 @@ InfoArtSummary.propTypes = {
   author: PropTypes.string.isRequired,
   listPrice: PropTypes.string,
   listPriceUSD: PropTypes.string,
+  summaries: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    value: PropTypes.string,
+  })),
 };
 
 export default InfoArtSummary;

@@ -34,6 +34,12 @@ import PersonalCollectedFavorited from './PersonalCollected/Favorited';
 import PersonalCollectedActivity from './PersonalCollected/Activity';
 import PersonalCollectedOwnedEmpty from './PersonalCollected/OwnedEmpty';
 import PersonalCollectedProfileSettingModal from './PersonalCollected/ProfileSettingModal';
+import CreateItem1 from './Create/CreateItem1';
+import CreateItem2 from './Create/CreateItem2';
+import CreateItemModal from './Create/CreateItemModal';
+import EditItem1 from './Create/EditItem1';
+import CreateCollection1 from './Create/CreateCollection1';
+import CreateCollection2 from './Create/CreateCollection2';
 
 function App() {
   return (
@@ -74,6 +80,12 @@ function App() {
           <Route path="/personal-collected/activity" element={<PersonalCollectedActivity />} />
           <Route path="/personal-collected/owned-empty" element={<PersonalCollectedOwnedEmpty />} />
           <Route path="/personal-collected/profile-setting-modal" element={<PersonalCollectedProfileSettingModal />} />
+          <Route path="/create/create-item-1" element={<CreateItem1 />} />
+          <Route path="/create/create-item-2" element={<CreateItem2 />} />
+          <Route path="/create/create-item-modal" element={<CreateItemModal />} />
+          <Route path="/create/edit-item-1" element={<EditItem1 />} />
+          <Route path="/create/create-collection-1" element={<CreateCollection1 />} />
+          <Route path="/create/create-collection-2" element={<CreateCollection2 />} />
         </Routes>
         <Footer />
       </BrowserRouter>

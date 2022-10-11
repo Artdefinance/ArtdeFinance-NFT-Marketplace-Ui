@@ -35,6 +35,12 @@ function Path() {
     ['', 'Activity', '/personal-collected/activity'],
     ['', 'Owned Empty + 프로필 레이어', '/personal-collected/owned-empty'],
     ['', 'Profile Setting Modal', '/personal-collected/profile-setting-modal'],
+    ['Create', 'Create Item 1', '/create/create-item-1'],
+    ['', 'Create Item 2', '/create/create-item-2'],
+    ['', 'Create Item Modal', '/create/create-item-modal'],
+    ['', 'Edit Item 1', '/create/edit-item-1'],
+    ['', 'Create Collection 1', '/create/create-collection-1'],
+    ['', 'Create Collection 2', '/create/create-collection-2'],
   ];
 
   return (

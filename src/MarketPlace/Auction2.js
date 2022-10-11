@@ -68,7 +68,7 @@ function Auction2() {
             </div>
             <div className="marketplace-modal__buttons">
               <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
-              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" disabled content="Auction Ended" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" disabled="true" content="Auction Ended" />
             </div>
           </InfoCard>
 

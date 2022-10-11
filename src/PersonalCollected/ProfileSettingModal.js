@@ -5,13 +5,13 @@ import OwnedEmpty from './OwnedEmpty';
 import IconStyle from '../Components/Icons/Icons';
 import WalletCopy from '../Components/WalletCopy';
 import Button from '../Components/Button/Button';
+import Input from '../Components/Inputs/Input';
+import Textarea from '../Components/Inputs/Textarea';
 import './ProfileSettingModal.scss';
 
 function ProfileSettingModal() {
   const labelId = useId();
   const describeId = useId();
-  const nameId = useId();
-  const biographyId = useId();
   const backdropProps = {
     style: {
       background: 'rgba(0, 0, 0, 0.2)',
@@ -46,20 +46,9 @@ function ProfileSettingModal() {
           </div>
           <div className="profile-setting-modal__body">
             <InfoSubtitle>Your username</InfoSubtitle>
-            <label htmlFor={nameId} className="profile-setting-modal__name-label">
-              <input id={nameId} className="profile-setting-modal__name-input" type="text" placeholder="Username" />
-            </label>
+            <Input name="title" placeholder="Text" />
             <InfoSubtitle>Biography</InfoSubtitle>
-            <div className="profile-setting-modal__bio">
-              <label htmlFor={biographyId} className="profile-setting-modal__bio-label">
-                <textarea
-                  id={biographyId}
-                  className="profile-setting-modal__bio-textarea"
-                  placeholder="Type your biography here."
-                />
-              </label>
-              <span className="profile-setting-modal__bio-length">0/1000 byte</span>
-            </div>
+            <Textarea placeholder="Type your biography here." maxLength={1000} />
             <InfoSubtitle>Wallet Address</InfoSubtitle>
             <button type="button" className="profile-setting-modal__btn-wallet" onClick={onClickWallet}>
               <span className="profile-setting-modal__wallet-code">
