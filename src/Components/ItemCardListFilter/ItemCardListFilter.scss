@@ -12,9 +12,11 @@
     &-keyword {
       position: relative;
       display: block;
-      width: 701px;
+      max-width: 701px;
       height: 60px;
+      margin-left: 36px;
       margin-right: 39px;
+      flex: 1;
   
       &-search {
         position: absolute;

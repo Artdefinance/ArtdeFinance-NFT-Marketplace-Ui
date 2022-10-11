@@ -99,6 +99,10 @@ button {
 	cursor:pointer
 }
 
+html, body {
+	min-width: 1240px;
+}
+
 .page-content {
 	width: 1440px;
   margin: 0 auto;
