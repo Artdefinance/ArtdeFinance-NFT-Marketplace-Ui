@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import IconStyle from '../Icons/Icons';
+import WalletCopy from '../WalletCopy';
 import './UserInfo.scss';
 
 function UserInfo() {
   const profileImageUrl = 'https://source.unsplash.com/random/128x128/?profile';
   const walletAddress = '0x5412...432d3';
   const iconArrowRight = <IconStyle shape="arrow-right" width={18} height={18} viewBox="0 0 18 18" />;
-  const [toggleWallet, setToggleWallet] = useState(true);
+  const [isWalletPopoverVisible, setWalletPopoverVisible] = useState(true);
   const onClickWallet = () => {
-    setToggleWallet(!toggleWallet);
+    setWalletPopoverVisible(!isWalletPopoverVisible);
   };
 
   return (
@@ -27,8 +28,7 @@ function UserInfo() {
       </div>
       <button type="button" className="userinfo__btn-wallet" onClick={onClickWallet}>
         {walletAddress}
-        <IconStyle shape="copy-all" width={18} height={18} viewBox="0 0 18 18" />
-        <em className="userinfo__wallet-copy" aria-hidden={!toggleWallet}>Copy!</em>
+        <WalletCopy isPopoverVisbile={isWalletPopoverVisible} />
       </button>
       <ul className="userinfo__links">
         <li>

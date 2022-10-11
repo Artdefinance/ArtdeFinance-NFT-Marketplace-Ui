@@ -33,6 +33,7 @@ import PersonalCollectedOwned from './PersonalCollected/Owned';
 import PersonalCollectedFavorited from './PersonalCollected/Favorited';
 import PersonalCollectedActivity from './PersonalCollected/Activity';
 import PersonalCollectedOwnedEmpty from './PersonalCollected/OwnedEmpty';
+import PersonalCollectedProfileSettingModal from './PersonalCollected/ProfileSettingModal';
 
 function App() {
   return (
@@ -64,7 +65,6 @@ function App() {
           <Route path="/marketplace/listing-2" element={<MarketPlaceListing2 />} />
           <Route path="/marketplace/auction-4" element={<MarketPlaceAuction4 />} />
           <Route path="/marketplace/auction-4-modal" element={<MarketPlaceAuction4Modal />} />
-          <Route path="/marketplace/auction-4-modal" element={<MarketPlaceAuction4Modal />} />
           <Route path="/collection/item" element={<CollectionItem />} />
           <Route path="/collection/item-empty" element={<CollectionItemEmpty />} />
           <Route path="/collection/activity" element={<CollectionActivity />} />
@@ -73,6 +73,7 @@ function App() {
           <Route path="/personal-collected/favorited" element={<PersonalCollectedFavorited />} />
           <Route path="/personal-collected/activity" element={<PersonalCollectedActivity />} />
           <Route path="/personal-collected/owned-empty" element={<PersonalCollectedOwnedEmpty />} />
+          <Route path="/personal-collected/profile-setting-modal" element={<PersonalCollectedProfileSettingModal />} />
         </Routes>
         <Footer />
       </BrowserRouter>

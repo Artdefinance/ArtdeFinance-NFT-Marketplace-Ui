@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import clsx from 'clsx';
 import IconStyle from '../Icons/Icons';
+import WalletCopy from '../WalletCopy';
 import './CollectionHead.scss';
 
 function CollectionHead({
@@ -13,6 +14,10 @@ function CollectionHead({
   stats,
 }) {
   const [toggle, setToggle] = useState(true);
+  const [isWalletPopoverVisible, setWalletPopoverVisible] = useState(false);
+  const onClickWallet = () => {
+    setWalletPopoverVisible(!isWalletPopoverVisible);
+  };
 
   return (
     <div className="collection-head">
@@ -28,9 +33,9 @@ function CollectionHead({
         <h3 className="collection-head__profile-name">
           {name}
         </h3>
-        <button type="button" className="collection-head__btn-wallet">
+        <button type="button" className="collection-head__btn-wallet" onClick={onClickWallet}>
           {walletAddress}
-          <IconStyle shape="copy-all" width={18} height={18} viewBox="0 0 18 18" />
+          <WalletCopy isPopoverVisbile={isWalletPopoverVisible} />
         </button>
         <p className={clsx('collection-head__desc', toggle && 'collection-head__desc--folded')}>
           {description}

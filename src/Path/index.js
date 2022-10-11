@@ -34,6 +34,7 @@ function Path() {
     ['', 'Favorited', '/personal-collected/favorited'],
     ['', 'Activity', '/personal-collected/activity'],
     ['', 'Owned Empty + 프로필 레이어', '/personal-collected/owned-empty'],
+    ['', 'Profile Setting Modal', '/personal-collected/profile-setting-modal'],
   ];
 
   return (

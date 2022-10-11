@@ -67,14 +67,8 @@
     border: 1px solid #c4c4c4;
     border-radius: 15px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
-
-    svg {
-      position: relative;
-      top: 5px;
-      margin-left: 5px;
-    }
   }
 
   &__desc {
