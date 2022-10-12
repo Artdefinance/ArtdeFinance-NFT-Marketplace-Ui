@@ -3,15 +3,17 @@ import Modal from '@material-ui/core/Modal';
 import {
   InfoArtSummary,
   InfoCard,
-  InfoPreviewComplete,
   InfoSubtitle,
+  InfoCurrencyInput,
+  InfoSchedule,
 } from '../Components/InfoCard';
 import ConfirmCheckbox from '../Components/Inputs/ConfirmCheckbox';
 import InputTitle from '../Components/Inputs/InputTitle';
 import Button from '../Components/Button/Button';
+import IconStyle from '../Components/Icons/Icons';
 import FixedPrice1 from './FixedPrice1';
 
-function FixedPrice2() {
+function ArtworksModal() {
   const labelId = useId();
   const describeId = useId();
   const backdropProps = {
@@ -44,38 +46,22 @@ function FixedPrice2() {
               listPrice="7865.0129"
               listPriceUSD="$ 359.00"
             />
-            <div className="marketplace-modal__fee">
-              <div className="marketplace-modal__fee-item">
-                <InputTitle help>Royalty Fee</InputTitle>
-                <span className="marketplace-modal__fee-per">5%</span>
-              </div>
-              <div className="marketplace-modal__fee-item">
-                <InputTitle help>Platform Fee</InputTitle>
-                <span className="marketplace-modal__fee-per">1%</span>
-              </div>
-            </div>
-            <div className="marketplace-modal__balance">
-              <InfoSubtitle>Balance</InfoSubtitle>
-              3455678909.0000
-              <span className="infocard-currency-tag">MATIC</span>
-            </div>
-            <div className="marketplace-modal__buttons">
-              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
-              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" />
-            </div>
-          </InfoCard>
-
-          <hr />
-
-          <InfoCard compact>
-            <h3 className="marketplace-modal__title">Complete Checkout</h3>
-            <InfoArtSummary
-              imageUrl="https://source.unsplash.com/random/144x128/?art"
-              author="Vincent van Gogh Tauba Auerbach Ryan Trecartin"
-              title="YVONNE BAR |1 x 55| NFT PRIDE&XCARDS"
-              listPrice="7865.0129"
-              listPriceUSD="$ 359.00"
+            <InfoSubtitle>Current bid</InfoSubtitle>
+            <InfoCurrencyInput
+              icon={<IconStyle shape="data-small--gray" width={17} height={20} viewBox="0 0 17 20" />}
+              value="7687.0986"
+              type="value"
+              currency="MATIC"
             />
+            <div className="marketplace-modal__price-cv">$ 359.00</div>
+            <InfoSubtitle>Offer Amount</InfoSubtitle>
+            <InfoCurrencyInput
+              icon={<IconStyle shape="data-small--gray" width={17} height={20} viewBox="0 0 17 20" />}
+              value={1500000}
+              type="input"
+              currency="MATIC"
+            />
+            <div className="marketplace-modal__price-cv">$ 359.00</div>
             <div className="marketplace-modal__fee">
               <div className="marketplace-modal__fee-item">
                 <InputTitle help>Royalty Fee</InputTitle>
@@ -100,28 +86,8 @@ function FixedPrice2() {
             </div>
             <div className="marketplace-modal__buttons">
               <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
-              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Complete Purchase" disabled="true" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Bid now" />
             </div>
-          </InfoCard>
-
-          <hr />
-
-          <InfoCard compact>
-            <h3 className="marketplace-modal__title">Your Purchase has been completed</h3>
-            <InfoPreviewComplete
-              imageUrl="https://source.unsplash.com/random/250x250/?art"
-              completeMessage={(
-                <>
-                  You purchased artwork NFT #0001 from the
-                  {' '}
-                  <em>Collections Name artdefinance NFT art collections</em>
-                  {' '}
-                  collection.
-                </>
-              )}
-              transactionId="0x4461....2d63"
-            />
-            <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1 marketplace-modal__btn-confirm" content="Confirm" />
           </InfoCard>
 
           <hr />
@@ -135,9 +101,80 @@ function FixedPrice2() {
               listPrice="7865.0129"
               listPriceUSD="$ 359.00"
             />
+            <InfoSubtitle>Current bid</InfoSubtitle>
+            <InfoCurrencyInput
+              icon={<IconStyle shape="data-small--gray" width={17} height={20} viewBox="0 0 17 20" />}
+              value="7687.0986"
+              type="value"
+              currency="MATIC"
+            />
+            <div className="marketplace-modal__price-cv">$ 359.00</div>
+            <InfoSubtitle>Offer Amount</InfoSubtitle>
+            <InfoCurrencyInput
+              icon={<IconStyle shape="data-small--gray" width={17} height={20} viewBox="0 0 17 20" />}
+              value={1500000}
+              type="input"
+              currency="MATIC"
+            />
+            <div className="marketplace-modal__price-cv">$ 359.00</div>
+            <div className="marketplace-modal__fee">
+              <div className="marketplace-modal__fee-item">
+                <InputTitle help>Royalty Fee</InputTitle>
+                <span className="marketplace-modal__fee-per">5%</span>
+              </div>
+              <div className="marketplace-modal__fee-item">
+                <InputTitle help>Platform Fee</InputTitle>
+                <span className="marketplace-modal__fee-per">1%</span>
+              </div>
+            </div>
+            <div className="marketplace-modal__balance">
+              <InfoSubtitle>Balance</InfoSubtitle>
+              3455678909.0000
+              <span className="infocard-currency-tag">MATIC</span>
+            </div>
+            <div className="marketplace-modal__total">
+              You need
+              {' '}
+              <strong>8336.9136 MATIC</strong>
+              {' '}
+              + Gas fees
+            </div>
+            <div className="marketplace-modal__buttons">
+              <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
+              <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" disabled="true" content="Bid now" />
+            </div>
+          </InfoCard>
+
+          <hr />
+
+          <InfoCard compact>
+            <h3 className="marketplace-modal__title">Place your bid</h3>
+            <InfoArtSummary
+              imageUrl="https://source.unsplash.com/random/144x128/?art"
+              author="Vincent van Gogh Tauba Auerbach Ryan Trecartin"
+              title="YVONNE BAR |1 x 55| NFT PRIDE&XCARDS"
+              listPrice="7865.0129"
+              listPriceUSD="$ 359.00"
+            />
+            <InfoSchedule
+              period="7 Days"
+              date="2022/04/04  03:23 - 2022/04/04  03:23"
+            />
             <ConfirmCheckbox
               defaultChecked={false}
               name="Confirm offer"
+              description="You’ll be asked to review and confirm this offer from your wallet."
+            />
+            <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
+          </InfoCard>
+
+          <hr />
+
+          <InfoCard compact>
+            <h3 className="marketplace-modal__title">Cancel Offer</h3>
+            <ConfirmCheckbox
+              defaultChecked
+              name="Confirm Cancelation"
               description="You’ll be asked to review and confirm this offer from your wallet."
             />
             <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1 marketplace-modal__btn-cancel" content="Cancel" />
@@ -148,4 +185,4 @@ function FixedPrice2() {
   );
 }
 
-export default FixedPrice2;
+export default ArtworksModal;

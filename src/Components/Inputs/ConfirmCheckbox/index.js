@@ -41,7 +41,7 @@ ConfirmCheckbox.defaultProps = {
 };
 
 ConfirmCheckbox.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.node,
   description: PropTypes.string,
   defaultChecked: PropTypes.bool,
 };

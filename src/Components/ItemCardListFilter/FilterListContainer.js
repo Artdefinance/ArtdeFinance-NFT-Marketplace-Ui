@@ -24,7 +24,10 @@ function FilterListContainer({
         resultCount={resultCount}
       />
       <div className={clsx('itemcard-list-filter__list', !isFilterVisible && 'itemcard-list-filter__list--filter-hidden')}>
-        <FilterOptions filterType={filterType} defaultCheckedIds={defaultCheckedIds} />
+        <FilterOptions
+          filterType={filterType}
+          defaultCheckedIds={defaultCheckedIds}
+        />
         <div className="itemcard-list-filter__list-content">
           <FilterSelected selectedFilters={selectedFilters} />
           {children}
@@ -50,7 +53,7 @@ FilterListContainer.propTypes = {
   resultCount: PropTypes.string.isRequired,
   selectedFilters: PropTypes.arrayOf(PropTypes.string),
   defaultCheckedIds: PropTypes.arrayOf(PropTypes.string),
-  filterType: PropTypes.oneOf(['digital-art', 'collection-item', 'collection-activity']),
+  filterType: PropTypes.oneOf(['digital-art', 'collection-item', 'collection-activity', 'artworks-1', 'artworks-3']),
   children: PropTypes.node,
 };
 

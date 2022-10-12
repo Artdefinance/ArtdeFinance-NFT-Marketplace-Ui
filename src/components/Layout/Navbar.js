@@ -1,29 +1,25 @@
-import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import clsx from 'clsx';
 import './Navbar.scss';
 
-class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+function Navbar() {
+  const { pathname } = useLocation();
 
-  render() {
-    return (
-      <nav className="navigation">
-        <ul className="nav_menu">
-          <li className="nav_item">
-            <a>Art Dao</a>
-          </li>
-          <li className="nav_item">
-            <a>Marketplace</a>
-          </li>
-          <li className="nav_item">
-            <a>Create</a>
-          </li>
-        </ul>
-      </nav>
-    );
-  }
+  return (
+    <nav className="navigation">
+      <ul className="nav_menu">
+        <li className={clsx('nav_item', pathname.startsWith('/art-dao') && 'active')}>
+          <Link to="/art-dao/token-swap">Art Dao</Link>
+        </li>
+        <li className={clsx('nav_item', pathname.startsWith('/marketplace') && 'active')}>
+          <Link to="/marketplace/digital-art-1">Marketplace</Link>
+        </li>
+        <li className={clsx('nav_item', pathname.startsWith('/create') && 'active')}>
+          <Link to="/create/create-item-1">Create</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;

@@ -76,7 +76,7 @@ function Listing2() {
               </InfoParagraph>
               <button type="button" className="marketplace__btn-seemore">See more</button>
             </InfoAccordion>
-            <InfoAccordion className="dao-voting-detail__spec-accordion" title="NFT Certification">
+            <InfoAccordion className="marketplace__spec-accordion" title="NFT Certification">
               <InfoSpecList specs={nftSpecs} semiCompact wide />
             </InfoAccordion>
           </InfoCard>
@@ -166,9 +166,9 @@ function Listing2() {
             <InfoTableContainer height={350} cols={['166', '185', '152', '117']}>
               <InfoTableRow type="head">
                 <InfoTableCell type="head">Form</InfoTableCell>
-                <InfoTableCell type="head">Offer Price</InfoTableCell>
-                <InfoTableCell type="head">Expiration</InfoTableCell>
-                <InfoTableCell type="head">Action</InfoTableCell>
+                <InfoTableCell type="head">To</InfoTableCell>
+                <InfoTableCell type="head">Price</InfoTableCell>
+                <InfoTableCell type="head">Date</InfoTableCell>
               </InfoTableRow>
               <InfoTableRow>
                 <InfoTableCell>

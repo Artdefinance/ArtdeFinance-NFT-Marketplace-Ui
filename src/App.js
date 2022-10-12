@@ -40,6 +40,15 @@ import CreateItemModal from './Create/CreateItemModal';
 import EditItem1 from './Create/EditItem1';
 import CreateCollection1 from './Create/CreateCollection1';
 import CreateCollection2 from './Create/CreateCollection2';
+import MarketPlaceArtworks1 from './MarketPlace/Artworks1';
+import MarketPlaceArtworks2 from './MarketPlace/Artworks2';
+import MarketPlaceArtworks3 from './MarketPlace/Artworks3';
+import MarketPlaceArtworksAuction1 from './MarketPlace/ArtworksAuction1';
+import MarketPlaceArtworksAuction2 from './MarketPlace/ArtworksAuction2';
+import MarketPlaceArtworksAuction3 from './MarketPlace/ArtworksAuction3';
+import MarketPlaceArtworksAuction1Modal from './MarketPlace/ArtworksAuction1Modal';
+import MarketPlaceArtworksAuction2Modal from './MarketPlace/ArtworksAuction2Modal';
+import MarketPlaceArtworksModal from './MarketPlace/ArtworksModal';
 
 function App() {
   return (
@@ -86,6 +95,15 @@ function App() {
           <Route path="/create/edit-item-1" element={<EditItem1 />} />
           <Route path="/create/create-collection-1" element={<CreateCollection1 />} />
           <Route path="/create/create-collection-2" element={<CreateCollection2 />} />
+          <Route path="/marketplace/artworks-1" element={<MarketPlaceArtworks1 />} />
+          <Route path="/marketplace/artworks-2" element={<MarketPlaceArtworks2 />} />
+          <Route path="/marketplace/artworks-3" element={<MarketPlaceArtworks3 />} />
+          <Route path="/marketplace/artworks-auction-1" element={<MarketPlaceArtworksAuction1 />} />
+          <Route path="/marketplace/artworks-auction-1-modal" element={<MarketPlaceArtworksAuction1Modal />} />
+          <Route path="/marketplace/artworks-auction-2" element={<MarketPlaceArtworksAuction2 />} />
+          <Route path="/marketplace/artworks-auction-2-modal" element={<MarketPlaceArtworksAuction2Modal />} />
+          <Route path="/marketplace/artworks-auction-3" element={<MarketPlaceArtworksAuction3 />} />
+          <Route path="/marketplace/artworks-modal" element={<MarketPlaceArtworksModal />} />
         </Routes>
         <Footer />
       </BrowserRouter>

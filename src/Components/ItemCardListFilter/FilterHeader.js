@@ -66,7 +66,7 @@ FilterHeader.propTypes = {
   ),
   resultCount: PropTypes.string,
   filterCount: PropTypes.number,
-  filterType: PropTypes.oneOf(['digital-art', 'collection-item', 'collection-activity']),
+  filterType: PropTypes.oneOf(['digital-art', 'collection-item', 'collection-activity', 'artworks-1', 'artworks-3']),
 };
 
 export default FilterHeader;

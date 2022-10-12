@@ -41,6 +41,15 @@ function Path() {
     ['', 'Edit Item 1', '/create/edit-item-1'],
     ['', 'Create Collection 1', '/create/create-collection-1'],
     ['', 'Create Collection 2', '/create/create-collection-2'],
+    ['Artworks', 'Artworks 1', '/marketplace/artworks-1'],
+    ['', 'Artworks 2', '/marketplace/artworks-2'],
+    ['', 'Artworks 3', '/marketplace/artworks-3'],
+    ['', 'Artworks Auction 1', '/marketplace/artworks-auction-1'],
+    ['', 'Artworks Auction 1 Modal', '/marketplace/artworks-auction-1-modal'],
+    ['', 'Artworks Auction 2', '/marketplace/artworks-auction-2'],
+    ['', 'Artworks Auction 2 Modal', '/marketplace/artworks-auction-2-modal'],
+    ['', 'Artworks Auction 3', '/marketplace/artworks-auction-3'],
+    ['', 'Artworks Modal', '/marketplace/artworks-modal'],
   ];
 
   return (

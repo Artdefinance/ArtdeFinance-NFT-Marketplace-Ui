@@ -31,7 +31,7 @@ InfoSpecList.defaultProps = {
 
 InfoSpecList.propTypes = {
   className: PropTypes.string,
-  specs: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+  specs: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.node)).isRequired,
   compact: PropTypes.bool,
   semiCompact: PropTypes.bool,
   wide: PropTypes.bool,

@@ -1,8 +1,9 @@
 import { useId, useState } from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import './InfoCurrency.scss';
 
-function InfoCurrencyInput({ icon, value, type, currency }) {
+function InfoCurrencyInput({ icon, value, type, currency, compact }) {
   const inputId = useId();
   const [inputValue, setInputValue] = useState(parseFloat(value, 10));
   const onChange = (event) => {
@@ -11,7 +12,7 @@ function InfoCurrencyInput({ icon, value, type, currency }) {
   };
 
   return (
-    <label htmlFor={inputId} className="infocard-currency">
+    <label htmlFor={inputId} className={clsx('infocard-currency', compact && 'infocard-currency--compact')}>
       {!!icon && (
         <span className="infocard-currency__icon">
           {icon}
@@ -41,6 +42,7 @@ InfoCurrencyInput.defaultProps = {
   icon: null,
   value: undefined,
   type: 'input',
+  compact: false,
 };
 
 InfoCurrencyInput.propTypes = {
@@ -48,6 +50,7 @@ InfoCurrencyInput.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   type: PropTypes.oneOf(['input', 'value']),
   currency: PropTypes.string.isRequired,
+  compact: PropTypes.bool,
 };
 
 export default InfoCurrencyInput;

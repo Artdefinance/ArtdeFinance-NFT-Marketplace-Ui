@@ -33,7 +33,7 @@ function CreateCollection2() {
             <Alert type="primary">Please upload images of your collection logo. 350x350 recommended.</Alert>
             <FileDragDrop
               boxTypeClass="drag-drop-create-collection"
-              currentImageUrl="https://source.unsplash.com/random/343x223/?art"
+              currentImageUrl="https://source.unsplash.com/random/288x288/?art"
               defaultFilesnames={[{
                 icon: 'JPG',
                 name: 'fake.jpg',
