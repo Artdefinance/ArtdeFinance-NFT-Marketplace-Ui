@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import InfoCardListPane from './InfoCardListPane';
 import './InfoCardList.scss';
 
 function InfoCardList({ children }) {
@@ -12,5 +13,7 @@ function InfoCardList({ children }) {
 InfoCardList.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+InfoCardList.Pane = InfoCardListPane;
 
 export default InfoCardList;

@@ -1,20 +1,18 @@
 .infocard-list {
-  column-count: 2;
-  column-gap: 0;
-  margin: 0 -18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 
   > .infocard-list {
     margin: 0;
   }
+}
+
+.infocard-list-pane {
+  width: calc(50% - 18px);
 
   > .infocard-container {
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid-column;
-
-    // box-shadow 잘리지 않도록 함
-    padding: 0 18px 60px;
-    margin-bottom: -30px;
+    margin-bottom: 30px;
   }
 }
