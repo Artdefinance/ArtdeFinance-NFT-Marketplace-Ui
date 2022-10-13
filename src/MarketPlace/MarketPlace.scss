@@ -7,6 +7,7 @@
   &__wrap {
     max-width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   &__title {
@@ -378,7 +379,7 @@
 }
 
 .marketplace-artworks {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 11px 0 84px;
 

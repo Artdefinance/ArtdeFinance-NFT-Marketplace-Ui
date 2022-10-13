@@ -5,7 +5,7 @@
   top: 86px;
   // (100vw - 1440px) / 2 : 헤더 우측 끝
   // + 34px : 로그아웃 버튼이 차지하는 width
-  right: calc((100vw - 1440px) / 2 + 34px);
+  right: max(calc((100vw - 1440px) / 2 + 34px), 49px);
   z-index: 1;
   width: 298px;
   border: 1px solid #f4f4f4;

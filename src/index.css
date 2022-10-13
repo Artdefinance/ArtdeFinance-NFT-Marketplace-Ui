@@ -99,11 +99,12 @@ button {
 	cursor:pointer
 }
 
-html, body {
-	min-width: 1240px;
+.page-content {
+	max-width: 1440px;
+  margin: 0 auto;
+	overflow: hidden;
 }
 
-.page-content {
-	width: 1440px;
-  margin: 0 auto;
+html, body {
+	min-width: 1240px;
 }

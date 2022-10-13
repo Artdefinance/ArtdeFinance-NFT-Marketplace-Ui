@@ -7,11 +7,14 @@
     height: 40px;
     padding: 1px 30px 1px 0;
     font-size: 24px;
-    line-height: 58px;
+    line-height: 37px;
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: #DDDDDD;
     box-sizing: border-box;
+    transition: all .1s linear;
+    // 삭제 버튼 클릭시 포커스를 잃을 때 focus 형태로 유지하기 위해 지연
+    transition-delay: .12s;
     @include RotaR;
 
     &:focus {

@@ -2,11 +2,13 @@
 
 .itemcard-list {
   display: flex;
-  margin: -70px -18px 0;
   flex-wrap: wrap;
+  max-width: (333px + 36px) * 4;
+  margin: 0 -18px;
+  justify-content: flex-start;
 
   .itemcard {
-    margin: 70px 18px;
+    margin: 0 18px 70px;
   }
 
   &--empty {
