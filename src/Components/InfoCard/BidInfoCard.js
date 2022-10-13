@@ -28,7 +28,7 @@ function BidInfoCard({ type }) {
           </div>
         </div>
       </div>
-      {['auction', 'auction-end', 'fixed-price'].includes(type) && (
+      {['auction', 'auction-end', 'auction-self', 'fixed-price'].includes(type) && (
         <div className="infocard-bid__time">
           <InfoSubtitle>Auction end in</InfoSubtitle>
           <span className="infocard-bid__time-slot">
@@ -81,7 +81,7 @@ function BidInfoCard({ type }) {
           <InfoPrice title="Fixed Price" primaryValue="768.0986" secondaryValue="1,500,000.00" />
         </div>
       )}
-      {type === 'fixed-price' && (
+      {['fixed-price', 'listing-cancel'].includes(type) && (
         <>
           <InfoSubtitle>Fixed Price</InfoSubtitle>
           <InfoCurrencyInput

@@ -8,7 +8,7 @@ import Pagenation from '../Components/Pagenation/Pagenation';
 
 function Artworks2() {
   const imageUrl = 'https://source.unsplash.com/random/666x786/?art';
-  const [isFilterVisible, setFilterVisible] = useState(true);
+  const [isFilterVisible, setFilterVisible] = useState(false);
   const onClickToggleButton = () => {
     setFilterVisible(!isFilterVisible);
   };
@@ -21,6 +21,7 @@ function Artworks2() {
           isFilterVisible={isFilterVisible}
           onClickToggleButton={onClickToggleButton}
           resultCount="10,000"
+          filterType="artworks-1"
         >
           <ItemCardList>
             {Array.from(Array(12)).map((_, index) => (
