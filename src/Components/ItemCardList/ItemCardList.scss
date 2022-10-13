@@ -2,11 +2,15 @@
 
 .itemcard-list {
   display: flex;
-  margin: -70px -18px 0;
+  // margin: -70px -18px 0;
   flex-wrap: wrap;
 
   .itemcard {
-    margin: 70px 18px;
+    // margin: 70px 18px;
+    margin: 0 36px 140px 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 
   &--empty {
