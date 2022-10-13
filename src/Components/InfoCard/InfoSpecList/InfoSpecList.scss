@@ -38,12 +38,17 @@
   }
 
   &--wide {
+    dt {
+      max-width: 50%;
+    }
+
     dd {
       // @include ellipse(1);
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      max-width: 50%;
+      max-width: 30%;
+      padding-left: 20%;
       margin-left: auto;
       text-align: right;
     }
