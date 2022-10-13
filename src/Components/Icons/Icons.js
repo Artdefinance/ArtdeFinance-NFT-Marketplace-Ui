@@ -855,6 +855,12 @@ export default class IconStyle extends React.Component {
               );
             }
 
+            if (shape === 'arrow-show') {
+              return (
+                <path d="M6.75 14.25L12 9L6.75 3.75" stroke="currentColor" />
+              );
+            }
+
             return <path d={d} fill={color} />;
           })()}
         </g>
