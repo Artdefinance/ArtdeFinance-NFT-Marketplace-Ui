@@ -39,6 +39,12 @@
 
   &--wide {
     dd {
+      // @include ellipse(1);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 50%;
+      margin-left: auto;
       text-align: right;
     }
   }
