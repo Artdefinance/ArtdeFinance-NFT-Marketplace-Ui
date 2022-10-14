@@ -1,0 +1,214 @@
+@import '../../assets/css/Mixins.scss';
+
+.userinfo {
+  position: absolute;
+  top: 86px;
+  // (100vw - 1440px) / 2 : 헤더 우측 끝
+  // + 34px : 로그아웃 버튼이 차지하는 width
+  right: max(calc((100vw - 1440px) / 2 + 34px), 49px);
+  z-index: 1;
+  width: 298px;
+  border: 1px solid #f4f4f4;
+  border-radius: 10px;
+  padding: 46px 16px 32px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0px 26px 80px rgba(18, 18, 23, 0.1);
+
+  &__btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  &__profile-img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+    }
+  }
+
+  &__btn-config {
+    position: absolute;
+    right: -12px;
+    bottom: -9px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 0px 5px rgba(120, 120, 120, 0.15);
+  }
+
+  &__btn-wallet {
+    @include AcuminproM;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__wallet-copy-wrap {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+  }
+
+  &__wallet-copy {
+    @include AcuminproM;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #fff;
+    font-style: normal;
+    position: relative;
+    display: inline-block;
+    padding: 8px 0 12px;
+    box-sizing: border-box;
+    height: 38px;
+    min-width: 72px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #5f44ff;
+    position: absolute;
+    left: -26px;
+    top: -48px;
+    transform: scale(1);
+    transform-origin: 50% 100%;
+    transition: all 0.2s ease-out;
+
+    &[aria-hidden="true"] {
+      opacity: 0;
+      transform: scale(0.8);
+      pointer-events: none;
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      bottom: -2px;
+      width: 15px;
+      height: 15px;
+      border-radius: 2px;
+      background-color: #5f44ff;
+      transform: rotate(45deg);
+      transform-origin: 0 0;
+      content: '';
+    }
+  }
+
+  &__links {
+    margin-top: 30px;
+    border: 1px solid #eee;
+    border-width: 1px 0;
+  }
+
+  &__link {
+    @include RotaSB;
+    font-size: 16px;
+    line-height: 1;
+    color: #555555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin: 3px 0;
+    padding: 0 13px 0 14px;
+    border-radius: 10px;
+    background: #fff;
+
+    &--selected {
+      color: #000;
+      background: #f3f1ff;
+
+      svg path {
+        stroke: #5f44ff;
+      }
+    }
+  }
+
+  &__accounts {
+    &-title {
+      @include RotaB;
+      font-size: 16px;
+      line-height: 1;
+      color: #888;
+      display: block;
+      margin: 19px 0 25px;
+      padding-left: 7px;
+    }
+  }
+
+  &__account {
+    margin-top: 15px;
+    padding: 0 9px 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    %_icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+    }
+
+    &-eth {
+      @extend %_icon;
+      background-color: #eaeaea;
+    }
+
+    &-matic {
+      @extend %_icon;
+      background-color: #e3deff;
+    }
+
+    &-bnb,
+    &-busd {
+      @extend %_icon;
+      background-color: #fff2bf;
+    }
+
+    &-adf {
+      @extend %_icon;
+      background-color: #ebebeb;
+    }
+
+    &-name {
+      @include RotaB;
+      font-size: 16px;
+      line-height: 1;
+      color: #000;
+      margin-left: 10px;
+    }
+
+    &-value {
+      @include AcuminproM;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #555;
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../assets/css/Mixins.scss';
+
+.page-tab {
+  @include RotaB;
+  font-size: 20px;
+  line-height: 2;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  color: #bbb;
+  position: relative;
+
+  &--selected {
+    border-bottom-color: #000;
+    color: #000;
+  }
+
+  & + & {
+    margin-left: 40px;
+  }
+}

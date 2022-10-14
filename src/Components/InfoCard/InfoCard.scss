@@ -1,0 +1,17 @@
+.infocard {
+  padding: 30px 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 15px 40px rgba(187, 187, 187, 0.15);
+
+  &--compact {
+    padding: 20px 40px;
+  }
+
+  &--transparent {
+    background: transparent;
+    box-shadow: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

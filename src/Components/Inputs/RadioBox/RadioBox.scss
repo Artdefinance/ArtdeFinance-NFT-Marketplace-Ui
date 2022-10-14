@@ -1,0 +1,47 @@
+@import '../../../assets/css/Mixins.scss';
+
+.radiobox {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+
+  &__item {
+    display: block;
+    width: calc(50% - 13px);
+  }
+
+  &__radio {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    appearance: none;
+  }
+
+  &__content {
+    @include RotaM;
+    height: 80px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__radio:checked + &__content {
+    @include RotaSB;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000;
+    border: 1px solid #000;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    background: #f3f1ff;
+  }
+}

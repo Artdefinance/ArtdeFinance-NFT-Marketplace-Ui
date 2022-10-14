@@ -18,6 +18,10 @@
     box-shadow: 0px 1px 3px 0px #00000014;
     box-sizing: border-box;
     @include RotaR;
+
+    svg {
+      vertical-align: middle;
+    }
   }
 
   &__title::before {
@@ -26,6 +30,7 @@
     right: 21px;
     width: 7px;
     height: 7px;
+    margin-top: -5px;
     border-top: 2px solid #555555;
     border-right: 2px solid #555555;
     transform: rotate(135deg);
@@ -35,6 +40,7 @@
   &__title span {
     padding-right: 20px;
     @include ellipse(1);
+    @include RotaSB;
   }
 
   &__title-icon {
@@ -46,6 +52,7 @@
   }
 
   &__list {
+    opacity: 0;
     overflow: hidden;
     position: absolute;
     height: 0;
@@ -53,7 +60,6 @@
     background-color: #ffffff;
     border: 1px solid #F4F4F4;
     border-radius: 5px;
-    box-shadow: 0px 3px 10px 0px #63636333;
     box-sizing: border-box;
   }
 
@@ -73,6 +79,10 @@
     transition: .3s ease;
     @include ellipse(1);
     @include RotaR;
+
+    svg {
+      vertical-align: middle;
+    }
   }
 
   &__item:hover {
@@ -95,17 +105,21 @@
 }
 
 .dropdown__list.active {
+  opacity: 1;
   overflow-y: scroll;
   height: auto;
-  max-height: 203px;
+  margin-top: 10px;
+  max-height: 225px;
   padding: 11px;
   z-index: 9;
+  box-shadow: 0px 3px 10px 0px #63636333;
 }
 
 .dropdown__title.active {
   border: 2px solid #5F44FF;
 
   &::before {
+    margin-top: 5px;
     transform: rotate(-45deg);
   }
 }
@@ -114,7 +128,7 @@
   .dropdown__title::before {
     width: 0;
     height: 0;
-    border-color: #DDDDDD transparent transparent; 
+    border-color: #555 transparent transparent; 
     border-style: solid; 
     border-width: 7px 5px 0; 
     transform: rotate(0);
@@ -127,11 +141,56 @@
   .dropdown__title.active::before {
     width: 0;
     height: 0;
-    border-color: #DDDDDD transparent transparent; 
+    border-color: #555 transparent transparent; 
     border-style: solid; 
     border-width: 7px 5px 0; 
     transform: rotate(180deg);
   }
 }
 
+.dropdown.rota-24 {
+  .dropdown__title  {
+    padding-left: 0;
+    border: 0;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 0;
+    box-shadow: none;
 
+    span {
+      @include RotaM;
+      font-size: 24px;
+      line-height: 1;
+      color: #bbb;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    &:before {
+      right: 15px;
+      width: 0;
+      height: 0;
+      margin-top: -3px;
+      border-color: #ddd transparent transparent; 
+      border-style: solid; 
+      border-width: 7px 5px 0; 
+      transform: rotate(0);
+    }
+
+    &.active::before {
+      width: 0;
+      height: 0;
+      margin-top: -4px;
+      border-color: #ddd transparent transparent; 
+      border-style: solid; 
+      border-width: 7px 5px 0; 
+      transform: rotate(180deg);
+    }
+  }
+
+  .dropdown__list {
+    width: 100%;
+  }
+}

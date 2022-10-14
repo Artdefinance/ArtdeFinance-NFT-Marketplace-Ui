@@ -1,0 +1,65 @@
+@import '../../assets/css/Mixins.scss';
+
+.collection-itemcard {
+  position: relative;
+  height: 264px;
+  padding: 49px 48px 48px 263px;
+  box-shadow: 0px 15px 40px rgba(187, 187, 187, 0.15);
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: #fff;
+
+  &__img {
+    position: absolute;
+    top: 49px;
+    left: 48px;
+    width: 167px;
+    height: 167px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #f0f0f0;
+  }
+
+  &__name {
+    @include RotaB;
+    font-size: 18px;
+    line-height: 1;
+    color: #5f44ff;
+    margin-bottom: 4px;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 391px;
+    margin: 1px -10px 0;
+  }
+
+  &__stat {
+    width: calc(50% - 10px);
+    margin: 23px 5px 0;
+
+    &-name {
+      @include RotaB;
+      font-size: 16px;
+      line-height: 1;
+      color: #bbb;
+      display: block;
+    }
+
+    &-value {
+      @include RotaEB;
+      font-size: 20px;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+
+      svg {
+        margin-right: 7px;
+      }
+    }
+  }
+}

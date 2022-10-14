@@ -1,0 +1,36 @@
+@import '../../../assets/css/Mixins.scss';
+
+.cofirm-checkbox {
+  margin: 32px 0;
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    appearance: none;
+  }
+
+  &__name {
+    @include RotaSB;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    margin-left: 12px;
+  }
+
+  &__desc {
+    @include AcuminproM;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #bbb;
+    margin-top: 12px;
+  }
+}

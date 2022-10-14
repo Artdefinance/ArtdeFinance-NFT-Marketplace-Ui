@@ -1,0 +1,124 @@
+@import '../assets/css/Mixins.scss';
+
+.main {
+  padding-top: 50px;
+}
+
+.main-slider {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 15px 40px rgba(187, 187, 187, 0.15);
+
+  &__progress {
+    position: absolute;
+    display: flex !important;
+    overflow: hidden;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    background: #eaeaea;
+    border-radius: 2px;
+
+    li {
+      position: relative;
+      flex: 1;
+      height: 4px;
+      overflow: hidden;
+      transition: border-radius 0s linear 0s;
+
+      button {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 4px;
+        overflow: hidden;
+        color: transparent;
+        font-size: 4px;
+        border-radius: 2px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        transform: scaleX(1);
+        transform-origin: 0 0;
+        transition: transform 0.5s linear;
+        background: linear-gradient(90.01deg, #5f44ff 5.34%, #5e43ff 101.38%);
+        box-shadow: 0px 2px 5px rgba(95, 68, 255, 0.2);
+        content: '';
+      }
+
+      li:first-child {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+      }
+    }
+
+    li.slick-active {
+      transition: border-radius 0s linear 0.5s;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    li.slick-active ~ li:before {
+      transform: scaleX(0);
+    }
+  }
+}
+
+.main-list {
+  margin-top: 154px;
+
+  + .main-list {
+    margin-top: 84px;
+  }
+
+  &:last-child {
+    margin-bottom: 88px;
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: 36px;
+
+    .tag-label {
+      position: relative;
+      top: 8px;
+    }
+  }
+
+  &__title {
+    @include RotaB;
+    font-size: 36px;
+    line-height: 1;
+    margin-right: 14px;
+    color: #000;
+  }
+
+  &__link {
+    @include RotaB;
+    position: relative;
+    display: inline-block;
+    margin-top: auto;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 24px;
+    color: #888;
+
+    &:after {
+      @include bg-image-icon('ico_chevron_big.svg');
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      vertical-align: top;
+      content: '';
+    }
+  }
+}

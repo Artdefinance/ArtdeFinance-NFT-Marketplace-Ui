@@ -1,7 +1,16 @@
 @import "../../assets/css/Mixins.scss";
 
 .pagenation {
+  position: relative;
   display: flex;
+  justify-content: flex-end;
+
+  &__progress {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
 
   &__list {
     display: flex;
@@ -54,6 +63,7 @@
 
   &__wrap {
     position: relative;
+    margin-top: 2px;
   }
 
   p {

@@ -1,0 +1,60 @@
+@import '../../../assets/css/Mixins.scss';
+
+.verify-code {
+  margin: 20px 0 0;
+
+  &__input {
+    @include RotaSB;
+    color: #000;
+    font-size: 30px;
+    line-height: 80px;
+    width: 70px;
+    height: 80px;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    border: 2px solid #f4f4f4;
+    border-radius: 15px;
+    margin-right: 15px;
+    text-align: center;
+    
+    &:focus {
+      background: #fff;
+      border-color: #5f44ff;
+      outline-color: #5f44ff;
+    }
+  }
+
+  &--error &__input {
+    color: #fd3d39;
+    border-color: #fd3d39;
+    background: #ffecec;
+
+    &:focus {
+      outline-color: #fd3d39;
+    }
+  } 
+
+  &__error-msg {
+    @include AcuminproM;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    color: #fd3d39;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  &__btn-resend {
+    @include RotaB;
+    font-size: 16px;
+    line-height: 80px;
+    color: #5f44ff;
+    height: 80px;
+    padding: 0 15px;
+  }
+}

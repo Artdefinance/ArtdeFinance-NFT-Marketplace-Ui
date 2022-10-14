@@ -4,18 +4,23 @@
   &__input {
     display: block;
     width: 100%;
-    height: 60px;
-    padding-right: 30px;
+    height: 40px;
+    padding: 1px 30px 1px 0;
     font-size: 24px;
-    line-height: 60px;
+    line-height: 37px;
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: #DDDDDD;
     box-sizing: border-box;
+    transition: all .1s linear;
+    // 삭제 버튼 클릭시 포커스를 잃을 때 focus 형태로 유지하기 위해 지연
+    transition-delay: .12s;
     @include RotaR;
 
     &:focus {
       outline: none;
+      padding-bottom: 0;
+      border-bottom: 2px solid #5f44ff;
     }
   }
 

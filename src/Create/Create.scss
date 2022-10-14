@@ -1,0 +1,164 @@
+@import '../assets/css/Mixins.scss';
+
+.create {
+  min-height: 1080px;
+  margin-bottom: 90px;
+
+  &__wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include RotaB;
+    font-size: 64px;
+    line-height: 1;
+    color: #000;
+    margin: 130px 0 80px;
+    text-align: center;
+  }
+
+  &__content {
+    padding: 32px 0 89px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(210, 210, 210, 0.15);
+
+    &--center {
+      padding: 0;
+    }
+
+    &--center &-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 960px;
+    }
+
+    &-inner {
+      width: 702px;
+      margin: 0 auto;
+
+
+      .input-title {
+        margin: 62px 0 10px;
+      }
+
+      .alert {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      .drag-drop-create {
+        margin-top: 15px;
+
+        .drag-drop {
+          height: 222px;
+        }
+
+        .drag-drop__title {
+          margin-bottom: 28px;
+        }
+      }
+
+      .drag-drop__content i {
+        display: none;
+      }
+
+      .drag-drop-create-collection {
+        margin: 44px auto 40px;
+
+        .drag-drop {
+          width: 288px;
+          height: 288px;
+          border-radius: 50%;
+          margin: 0 auto 40px;
+        }
+
+        .drag-drop__title {
+          width: 150px;
+        }
+
+        .drag-drop__text {
+          display: none;
+        }
+
+        .drag-drop-image {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 87px;
+  }
+
+  &__btn-create {
+    width: 431px;
+    margin: 87px auto 0;
+  }
+
+  &__btn-delete {
+    width: 250px;
+  }
+
+  &__btn-update {
+    width: 431px;
+  }
+
+  &__btn-collection {
+    width: 431px;
+    margin: 0 auto;
+  }
+
+  &__empty-img {
+    margin-top: -50px;
+  }
+
+  &__empty-msg {
+    @include RotaB;
+    font-size: 24px;
+    line-height: 1;
+    margin: 17px auto 39px;
+    text-align: center;
+  }
+
+  &-modal {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+
+    .infocard-subtitle {
+      color: #888;
+      margin-bottom: 13px;
+    }
+
+    &__content {
+      width: 702px;
+      margin-top: 86px;
+    }
+
+    &__title {
+      @include RotaB;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #000;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    &__btn-confirm,
+    &__btn-cancel {
+      width: 390px;
+      margin: 30px auto 20px;
+    }
+
+    .infocard-preview-complete__msg {
+      @include RotaB;
+    }
+  }
+}

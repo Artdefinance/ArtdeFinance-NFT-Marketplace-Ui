@@ -1,0 +1,42 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-history {
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 11px 0 18px;
+
+    & + & {
+      border-top: 1px solid #eee;
+    }
+  }
+
+  &__year {
+    @include RotaB;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #888;
+    width: 74px;
+  }
+
+  &__content {
+    @include AcuminproR;
+    @include ellipse(2);
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    word-break: break-all;
+    width: calc(100% - 74px - 143px);
+  }
+
+  &__location {
+    @include AcuminproM;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: right;
+    color: #888;
+    width: 113px;
+    padding-left: 30px;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-expected-value {
+  @include AcuminproM;
+  font-size: 14px;
+  line-height: 1;
+  color: #555;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  em {
+    @include RotaB;
+    font-size: 21px;
+    line-height: 28px;
+    font-style: normal;
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 4px;
+    padding: 0 8px;
+    color: #000;
+    background-color: #f4f4f4;
+  }
+}

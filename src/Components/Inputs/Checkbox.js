@@ -11,6 +11,13 @@ export default class Checkbox extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount() {
+    const { defaultChecked } = this.props;
+    if (typeof defaultChecked !== 'undefined') {
+      this.setState({ ischecked: defaultChecked });
+    }
+  }
+
   handleChange = (e) => {
     this.setState({
       ischecked: e.target.checked,

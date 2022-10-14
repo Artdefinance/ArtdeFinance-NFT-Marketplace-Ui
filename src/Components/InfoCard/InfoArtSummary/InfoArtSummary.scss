@@ -1,0 +1,105 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-art-summary {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0 30px;
+
+  &__preview {
+    width: 144px;
+    margin-right: 35px;
+    background: #d9d9d9;
+    border-radius: 10px;
+  
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  }
+  
+  &__detail {
+    width: calc(100% - 179px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  &__author {
+    @include RotaB;
+    font-size: 16px;
+    line-height: 1;
+    color: #5f44ff;
+  }
+  
+  &__title {
+    @include RotaB;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #000;
+    margin: 9px 0 18px;
+  }
+  
+  &__list-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 17px;
+    border-top: 1px solid #f0f0f0;
+  
+    &-title {
+      @include RotaSB;
+      font-size: 14px;
+      line-height: 1;
+      margin-right: auto;
+      color: #9f9f9f;
+    }
+  
+    &-value {
+      @include RotaB;
+      font-size: 18px;
+      line-height: 1;
+      color: #000;
+      margin-left: 6px;
+    }
+  
+    &-cv {
+      @include RotaM;
+      font-size: 15px;
+      line-height: 1;
+      color: #888;
+      margin-top: 8px;
+      align-self: flex-end;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    padding-top: 17px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    & + & {
+      margin-top: 10px;
+    }
+  }
+
+  &__item-title {
+    @include RotaSB;
+    font-size: 14px;
+    line-height: 1;
+    margin-right: auto;
+    color: #9f9f9f;
+  }
+
+  &__item-value {
+    @include RotaB;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    margin-left: 6px;
+  }
+}

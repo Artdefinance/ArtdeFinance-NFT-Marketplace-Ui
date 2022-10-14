@@ -1,35 +1,101 @@
+@import '../../assets/css/Mixins.scss';
+
+.navigation {
+  height: 100%;
+}
+
 .nav_menu {
+  height: 100%;
   display: flex;
 
   .nav_item {
-    margin-right: 30px;
+    position: relative;
+    margin-right: 24px;
+    padding: 3px;
     font-weight: 600;
-    a {
+
+    > a {
+      display: flex;
+      align-items: center;
+      height: 100%;
       font-weight: inherit;
     }
-  }
-  .menu_dropdown {
-    .dropdown__title {
-      height: auto;
-      padding: 0;
-      padding-right: 20px;
-      border: 0;
-      border-radius: 0;
-      box-shadow: none;
-      &::before {
-        right: 0;
-        border-top: 1px solid #BBBBBB;
-        border-right: 1px solid #BBBBBB;
-      }
 
-      span {
-        padding-right: 0;
+    &.active:after {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #000;
+      content: '';
+    }
+
+    &:not(:hover) .subnav_menu {
+      min-width: 0;
+      height: 0;
+      padding-top: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.subnav_menu {
+  position: absolute;
+  top: calc(100% - 10px);
+  right: -30px;
+  opacity: 1;
+  height: auto;
+  min-width: 231px;
+  padding-top: 36px;
+
+  .subnav_items {
+    display: block;
+    width: 100%;
+    padding: 22px 11px;
+    border: 1px solid #f4f4f4;
+    background: #fff;
+    box-shadow: 0px 26px 80px rgba(18, 18, 23, 0.1);
+    border-radius: 10px;
+
+    &:hover .subnav_item.active:not(:hover) {
+      color: #000;
+      background: #fff;
+      transition-delay: .1s;
+
+      svg {
+        color: #5f44ff;
+        transition-delay: .1s;
       }
     }
-    .dropdown__list {
-      border: 0;
-      border-radius: 0;
-      box-shadow: none;
+  }
+
+  .subnav_item {
+    @include RotaSB;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 9px;
+    border-radius: 10px;
+    background: #fff;
+    transition: all 0.1s linear;
+
+    svg {
+      color: #5f44ff;
+    }
+
+    &:hover,
+    &.active {
+      color: #555;
+      background: #f3f1ff;
+
+      svg {
+        color: #bbb;
+      }
     }
   }
 }

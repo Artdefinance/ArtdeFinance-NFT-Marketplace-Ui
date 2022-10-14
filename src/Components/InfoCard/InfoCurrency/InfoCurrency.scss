@@ -1,0 +1,73 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-currency {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  padding-right: 21px;
+  background: #f4f4f4;
+  border-radius: 5px;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+  }
+
+  &__input,
+  &__value {
+    @include RotaEB;
+    font-size: 28px;
+    line-height: 40px;
+    color: #000;
+    display: block;
+    padding: 10px 0;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    text-align: right;
+    background: #f4f4f4;
+  }
+
+  &__input {
+    appearance: textfield;
+
+    &::placeholder {
+      color: #bbb;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &-tag {
+    @include RotaB;
+    padding: 0 5px;
+    font-size: 15px;
+    height: 22px;
+    line-height: 22px;
+    color: #888;
+    background-color: rgba(136, 136, 136, 0.1);
+  }
+
+  & &-tag {
+    margin-left: 16px;
+  }
+
+  &--compact {
+    height: 50px;
+  }
+
+  &--compact &__input,
+  &--compact &__value {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

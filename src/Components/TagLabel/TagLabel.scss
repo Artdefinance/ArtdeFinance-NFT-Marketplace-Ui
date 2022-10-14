@@ -1,0 +1,41 @@
+@import '../../assets/css/Mixins.scss';
+
+.tag-label {
+  @include RotaB;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  background: #5f44ff;
+  box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 1px rgba(255, 255, 255, 0.25);
+  border-radius: 5px 0px;
+  font-style: normal;
+  vertical-align: middle;
+
+  &--live {
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    font-size: 18px;
+
+    &:before {
+      display: inline-block;
+      position: relative;
+      top: -1px;
+      width: 4px;
+      height: 4px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background: #fff;
+      vertical-align: middle;
+      content: '';
+    }
+  }
+
+  &--compact {
+    padding: 3px 8px;
+  }
+}

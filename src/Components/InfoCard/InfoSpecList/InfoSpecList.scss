@@ -1,0 +1,56 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-spec-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 17px 0 20px;
+  
+  $_dt-width: 187px;
+
+  dt {
+    @include RotaB;
+    width: $_dt-width;
+    color: #888888;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 26px;
+  }
+
+  dd {
+    @include AcuminproL;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    width: calc(100% - $_dt-width);
+    margin-top: 26px;
+  }
+
+  &--compact {
+    dt, dd {
+      margin-top: 6px;
+    }
+  }
+
+  &--semi-compact {
+    dt, dd {
+      margin-top: 15px;
+    }
+  }
+
+  &--wide {
+    dt {
+      max-width: 50%;
+    }
+
+    dd {
+      // @include ellipse(1);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 30%;
+      padding-left: 20%;
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+}

@@ -34,6 +34,8 @@ import Icons from '../Components/Icons/Icons';
 // Input
 import Input from '../Components/Inputs/Input';
 import Checkbox from '../Components/Inputs/Checkbox';
+import TagLabel from '../Components/TagLabel';
+import Alert from '../Components/Alert';
 
 function ArteComponents() {
   const ExampleContent1 = [
@@ -251,7 +253,6 @@ function ArteComponents() {
       <link
         rel="stylesheet"
         type="text/css"
-        charSet="UTF-8"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
       />
       <link
@@ -676,6 +677,21 @@ function ArteComponents() {
       </div>
       {/* Sortable */}
 
+      <div>
+        <h2>TagLabel</h2>
+        <TagLabel type="live">Live</TagLabel>
+        <br />
+        <TagLabel>Selected</TagLabel>
+        <br />
+        <TagLabel type="compact">Selected</TagLabel>
+      </div>
+      {/* TagLabel */}
+
+      <div>
+        <h2>Alert</h2>
+        <Alert type="primary">ADF tokens and governance tokens can be used by swapping vADF at a 1:100 ratio.</Alert>
+      </div>
+      {/* Alert */}
     </div>
   );
 }

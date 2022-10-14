@@ -1,0 +1,191 @@
+@import '../../assets/css/Mixins.scss';
+
+.art-banner {
+  display: flex;
+  padding: 86px;
+  background-color: #fff;
+  border-radius: 10px;
+
+  &__figure {
+    position: relative;
+    width: 468px;
+    min-height: 495px;
+    background: #d9d9d9;
+    border-radius: 5px;
+
+    &-img {
+      border-radius: 5px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 86px;
+  }
+
+  &__author {
+    @include RotaB;
+    display: block;
+    margin: 51px 0 8px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1;
+    color: #5f44ff;
+  }
+
+  &__title {
+    @include RotaB;
+    display: block;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #000;
+  }
+
+  &__detail {
+    @include RotaSB;
+    line-height: 1;
+    margin-bottom: 42px;
+    padding-bottom: 28px;
+
+    // border-bottom 0.5px
+    font-size: 10px;
+    box-shadow: 0px 0.05em 0px #ddd;
+
+    &--type,
+    &--size {
+      position: relative;
+      display: inline-block;
+      padding-left: 27px;
+      height: 21px;
+      color: #555;
+      line-height: 1.2;
+      font-size: 16px;
+    }
+
+    &--type {
+      margin-right: 42px;
+    }
+
+    &--type:before,
+    &--size:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    &--type:before {
+      background-image: url('/assets/images/icons/ico_info_type.svg');
+    }
+
+    &--size:before {
+      background-image: url('/assets/images/icons/ico_info_size.svg');
+    }
+  }
+
+  &__footer {
+    position: relative;
+    margin-top: auto;
+  }
+
+  &__profile {
+    display: flex;
+
+    &-img {
+      background-color: #f4f4f4;
+    }
+    &-img, &-img img {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+    }
+    &-info {
+      margin-left: 20px;
+    }
+    &-owner {
+      @include RotaB;
+      display: block;
+      margin-top: 4px;
+      line-height: 1;
+      color: #bbb;
+    }
+    &-name {
+      @include AcuminproR;
+      display: block;
+      margin-top: 1px;
+      line-height: 1.2;
+      color: #000;
+    }
+  }
+
+  &__stat {
+    margin-top: 14px;
+    padding-bottom: 9px;
+    line-height: 1;
+
+    &-like,
+    &-view {
+      @include RotaB;
+      display: inline-block;
+      position: relative;
+      padding-top: 3px;
+      padding-left: 24px;
+      height: 17px;
+      font-size: 14px;
+      line-height: 1;
+      color: #000;
+    }
+
+    &-like {
+      margin-right: 21px;
+    }
+
+    &-like:before,
+    &-view:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    &-like:before {
+      background-image: url('/assets/images/icons/ico_profile_like.svg');
+    }
+
+    &-view:before {
+      background-image: url('/assets/images/icons/ico_profile_view.svg');
+    }
+  }
+
+  &__btn-collect {
+    @include RotaSB;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    padding: 26px 50px;
+    width: 230px;
+    font-size: 18px;
+    line-height: 1;
+    color: #fff;
+    background: linear-gradient(112.43deg, #5f44ff 31.89%, #9482ff 93.62%);
+    border-radius: 35px;
+  }
+}

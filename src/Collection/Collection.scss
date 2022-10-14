@@ -1,0 +1,15 @@
+.collection {
+  min-height: 1080px;
+  margin-bottom: 90px;
+
+  &__wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .pagenation {
+    margin-top: 30px;
+    justify-content: flex-end;
+  }
+}

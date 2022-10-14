@@ -1,0 +1,18 @@
+.infocard-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  > .infocard-list {
+    margin: 0;
+  }
+}
+
+.infocard-list-pane {
+  width: calc(50% - 18px);
+
+  > .infocard-container {
+    margin-bottom: 30px;
+  }
+}

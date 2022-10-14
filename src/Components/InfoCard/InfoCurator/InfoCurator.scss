@@ -1,0 +1,57 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-curator {
+  &__title {
+    @include RotaB;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 14px;
+    }
+
+    &-name {
+      @include ellipse(2);
+      @include RotaSB;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #000;
+      max-width: 210px;
+    }
+  }
+
+  &--wide &__profile-name {
+    max-width: none;
+  }
+
+  &__percentage {
+    @include RotaB;
+    font-size: 32px;
+    line-height: 1;
+    color: #000;
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
+    
+    &-sign {
+      @include RotaB;
+      font-size: 21px;
+      line-height: 1;
+    }
+
+    &--selected {
+      color: #5f44ff;
+    }
+  }
+}

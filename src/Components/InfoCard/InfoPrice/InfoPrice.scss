@@ -1,0 +1,62 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-price {
+  margin: 32px 0 5px;
+
+  &__title {
+    @include RotaB;
+    font-size: 16px;
+    line-height: 1;
+    color: #888;
+    margin-bottom: 6px;
+  }
+  
+  &__list {
+    border-radius: 5px;
+    padding: 13px 20px 9px;
+    background-color: #f4f4f4;
+  }
+
+  &__row {
+    margin: 8px 0;
+    text-align: right;
+  }
+
+  &__primary-value {
+    @include RotaB;
+    font-size: 28px;
+    line-height: 1;
+    color: #000;
+  }
+
+  &__secondary-value {
+    @include RotaSB;
+    font-size: 20px;
+    line-height: 1;
+    color: #888;
+  }
+
+  &__type {
+    @include RotaB;
+    display: inline-block;
+    background-color: rgba(136, 136, 136, 0.1);
+    border-radius: 2px;
+    min-width: 45px;
+    height: 22px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #888;
+    margin-left: 15px;
+    text-align: center;
+  }
+
+  &--compact {
+    .infocard-price__primary-value {
+      font-size: 24px;
+    }
+  
+    .infocard-price__secondary-value {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,313 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './MarketPlace.scss';
-import Checkbox from '../Components/Inputs/Checkbox';
-import Dropdown from '../Components/Dropdown/Dropdown';
-import Icons from '../Components/Icons/Icons';
+import { useState } from 'react';
+import ItemCardList from '../Components/ItemCardList';
+import ArtItemCard from '../Components/ItemCard/ArtItemCard';
+import { FilterListContainer } from '../Components/ItemCardListFilter';
 import Pagenation from '../Components/Pagenation/Pagenation';
+import './MarketPlace.scss';
 
-export default class MarketPlace extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: true, // 데이터 여부 false 시 데이터 없음 화면 전환
-      categoryActive1: true,
-      categoryActive2: false,
-      categoryActive3: false,
-      isToggleOn: false,
-      isToggleOn2: true,
-      isToggleOn3: true,
-    };
-    this.categoryClick = this.categoryClick.bind(this);
-    this.clickHandler = this.clickHandler.bind(this);
-  }
+function MarketPlace() {
+  const imageUrl = 'https://source.unsplash.com/random/666x786/?art';
+  const [isFilterVisible, setFilterVisible] = useState(false);
+  const onClickToggleButton = () => {
+    setFilterVisible(!isFilterVisible);
+  };
 
-  categoryClick(e) {
-    this.setState((prevState) => ({
-      categoryActive1: false,
-      categoryActive2: false,
-      categoryActive3: false,
-      [e.target.value]: false,
-      [e.target.value]: !prevState[e.target],
-    }));
-  }
-
-  clickHandler(e) {
-    this.setState((prevState) => ({
-      [e.target.value]: !prevState[e.target.value],
-    }));
-  }
-
-  render() {
-    const {
-      data,
-      categoryActive1,
-      categoryActive2,
-      categoryActive3,
-      isToggleOn,
-      isToggleOn2,
-      isToggleOn3,
-    } = this.state;
-    const ExampleContent1 = [
-      {
-        id: '1',
-        title: 'Sort by ending soon',
-      },
-      {
-        id: '2',
-        title: 'Sort by recently active',
-      },
-      {
-        id: '3',
-        title: 'Sort by newest',
-      },
-      {
-        id: '4',
-        title: 'Sort by oldest',
-      },
-    ];
-    const ExampleData = [
-      {
-        id: '1',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '2',
-        bg: '',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '3',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '4',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '5',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '6',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '7',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '8',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '9',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '10',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '11',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-      {
-        id: '12',
-        bg: '/assets/images/page/activity/img_square_dummy.png',
-        title: 'Vincent van GoghVincent van Gogh Vincent',
-        desc: 'Starry Night Over the RhonefOver the rho nef dafsd ober aldedfdaq...2011',
-      },
-    ];
-    return (
-      <div>
-        <div className="marketplace">
-          <div className="marketplace__wrap">
-            <h2>marketplace</h2>
-            <div className="marketplace__filter">
-              <div className="tab-category">
-                <button
-                  type="button"
-                  onClick={this.categoryClick}
-                  className={
-                    categoryActive1
-                      ? 'tab-category__button tab-category__button--active'
-                      : 'tab-category__button'
-                  }
-                  value="categoryActive1"
-                >
-                  Now Curating
-                </button>
-                <button
-                  type="button"
-                  onClick={this.categoryClick}
-                  className={
-                    categoryActive2
-                      ? 'tab-category__button tab-category__button--active'
-                      : 'tab-category__button'
-                  }
-                  value="categoryActive2"
-                >
-                  marketplace Result
-                </button>
-                <button
-                  type="button"
-                  onClick={this.categoryClick}
-                  className={
-                    categoryActive3
-                      ? 'tab-category__button tab-category__button--active'
-                      : 'tab-category__button'
-                  }
-                  value="categoryActive3"
-                >
-                  marketplace History
-                </button>
-              </div>
-              <div className="marketplace-filter">
-                <div className="marketplace-filter__wrap">
-                  <button
-                    type="button"
-                    onClick={this.clickHandler}
-                    className={
-                      isToggleOn
-                        ? 'marketplace-filter__header marketplace-filter__header--acitve'
-                        : 'marketplace-filter__header'
-                    }
-                    value="isToggleOn"
-                  >
-                    Filter &middot; 3
-                  </button>
-                  {isToggleOn ? (
-                    <div className="marketplace-filter__content">
-                      <div className="marketplace-filter__item">
-                        <button
-                          type="button"
-                          onClick={this.clickHandler}
-                          className={
-                            isToggleOn2
-                              ? 'marketplace-filter__content-title marketplace-filter__content-title--active'
-                              : 'marketplace-filter__content-title'
-                          }
-                          value="isToggleOn2"
-                        >
-                          Artist Owner
-                        </button>
-                        {isToggleOn2 ? (
-                          <div className="marketplace-filter__checkbox">
-                            <Checkbox chkId="sale1" content="For Sale (10)" />
-                            <Checkbox chkId="sale2" content="For Sale (10)" />
-                            <Checkbox chkId="sale3" content="For Sale (10)" />
-                            <Checkbox chkId="sale4" content="For Sale (10)" />
-                            <Checkbox chkId="sale5" content="For Sale (10)" />
-                            <Checkbox chkId="sale6" content="For Sale (10)" />
-                            <button type="button">See more</button>
-                          </div>
-                        ) : null}
-                      </div>
-                      <div className="marketplace-filter__item">
-                        <button
-                          type="button"
-                          onClick={this.clickHandler}
-                          className={
-                            isToggleOn3
-                              ? 'marketplace-filter__content-title marketplace-filter__content-title--active'
-                              : 'marketplace-filter__content-title'
-                          }
-                          value="isToggleOn3"
-                        >
-                          Artist
-                        </button>
-                        {isToggleOn3 ? (
-                          <div className="marketplace-filter__checkbox">
-                            <Checkbox chkId="artist1" content="For Sale (10)" />
-                            <Checkbox chkId="artist2" content="For Sale (10)" />
-                            <Checkbox
-                              chkId="artist3"
-                              content="For Sale (10)"
-                              disabled="true"
-                            />
-                            <Checkbox chkId="artist4" content="For Sale (10)" />
-                            <Checkbox chkId="artist5" content="For Sale (10)" />
-                            <Checkbox chkId="artist6" content="For Sale (10)" />
-                            <button type="button">See more</button>
-                          </div>
-                        ) : null}
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
-                <div className="marketplace-filter__dropdown">
-                  <Dropdown
-                    dropWidth="215px"
-                    dropHeight="60px"
-                    dropTitle="Sort by"
-                    content={ExampleContent1}
-                    dropFontSize="16px"
-                    dropFontColor="#000000"
-                  />
-                  <p>10,000 Results</p>
-                </div>
-              </div>
-            </div>
-            {
-              data === true
-              ? (
-                <>
-                  <div className={isToggleOn ? 'marketplace-list marketplace-list--active' : 'marketplace-list'}>
-                    {ExampleData.map((items) => (
-                      <Link to="/" className="marketplace-list__item" key={items.id}>
-                        <p className="marketplace_time-tag">
-                          <Icons shape="clock" width="20px" height="20px" />
-                          <span>180d</span>
-                          <span>17h</span>
-                          <span>38m</span>
-                          <span>52s</span>
-                        </p>
-                        <span className="marketplace-list__img">
-                          <span style={{ backgroundImage: `url(${items.bg})` }} />
-                        </span>
-                        <div className="marketplace-list__content">
-                          <p className="marketplace-list__title">{items.title}</p>
-                          <p className="marketplace-list__desc">{items.desc}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                  <Pagenation />
-                </>
-              ) : (
-                <div className="filter-content">
-                  <div className="nodata">
-                    <span className="nodata__img" />
-                    <p>No artworks found for this search</p>
-                  </div>
-                </div>
-              )
-            }
-          </div>
-        </div>
+  return (
+    <div className="marketplace marketplace-digital-art">
+      <div className="marketplace__wrap">
+        <h2 className="marketplace__title">Market Place</h2>
+        <FilterListContainer
+          isFilterVisible={isFilterVisible}
+          onClickToggleButton={onClickToggleButton}
+          resultCount="10,000"
+          filterType="digital-art"
+        >
+          <ItemCardList>
+            {Array.from(Array(12)).map((_, index) => (
+              <ArtItemCard
+                key={`${index.toString()}`}
+                imageUrl={imageUrl}
+                title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
+                description="Starry Night Over the Rhon Starry Night Over the Rhon"
+                sellType="Curation Price"
+                priceValue="15,000,000.00 USD"
+                coinPriceValue="23,543,230.80 BUSD"
+                isSoldOut={index === 5}
+              />
+            ))}
+          </ItemCardList>
+        </FilterListContainer>
+        <Pagenation isProgressVisible />
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default MarketPlace;

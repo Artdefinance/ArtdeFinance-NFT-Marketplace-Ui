@@ -1,0 +1,114 @@
+@import '../../assets/css/Mixins.scss';
+
+.collection-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+
+  th {
+    @include RotaB;
+    font-size: 18px;
+    line-height: 1;
+    height: 60px;
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  td {
+    border-top: 1px solid #eee;
+    vertical-align: middle;
+  }
+
+  &__cell {
+    span {
+      @include ellipse(1);
+      @include AcuminproM;
+      font-size: 18px;
+      line-height: 1.2;
+      color: #000;
+      text-align: center;
+    }
+  }
+
+  &__item-cell {
+    &-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 209px;
+      padding-left: 188px;
+
+      .tag-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top-left-radius: 0;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: 43px;
+      left: 30px;
+      width: 120px;
+      height: 120px;
+      border-radius: 5px;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-color: #f0f0f0;
+    }
+
+    &-author {
+      @include RotaB;
+      font-size: 16px;
+      line-height: 1;
+      color: #5f44ff;      
+    }
+
+    &-name {
+      @include RotaB;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #000;
+      margin-top: 8px;
+    }
+  }
+
+  &__price-cell {
+    text-align: center;
+
+    &-inner {
+      @include RotaB;
+      font-size: 20px;
+      line-height: 1;
+      color: #000;
+      display: inline-block;
+      max-width: 80%;
+      text-align: left;
+    }
+
+    span {
+      @include RotaB;
+      display: block;
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 5px;
+      color: #888;
+    }
+  }
+
+  &__date-cell {
+    @include AcuminproM;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #888;
+    text-align: center;
+
+    svg {
+      margin-left: 2px;
+      vertical-align: middle;
+    }
+  }
+}

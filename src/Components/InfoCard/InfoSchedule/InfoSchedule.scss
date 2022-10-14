@@ -1,0 +1,30 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  border-width: 1px 0;
+  padding: 17px 0;
+
+  .infocard-subtitle {
+    margin: auto;
+    margin-left: 0;
+  }
+
+  &__period {
+    @include RotaB;
+    font-size: 18px;
+    line-height: 1;
+    color: #000;
+  }
+
+  &__date {
+    @include AcuminproM;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #bbb;
+    margin-left: 14px;
+  }
+}

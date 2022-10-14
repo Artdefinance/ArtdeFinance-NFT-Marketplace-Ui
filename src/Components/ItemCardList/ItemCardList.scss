@@ -1,0 +1,32 @@
+@import '../../assets/css/Mixins.scss';
+
+.itemcard-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: (333px + 36px) * 4;
+  margin: 0 -18px;
+  justify-content: flex-start;
+
+  .itemcard {
+    margin: 0 18px 70px;
+  }
+
+  &--empty {
+    width: 100%;
+    margin: 44px auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__empty-msg {
+    @include RotaB;
+    font-size: 20px;
+    line-height: 1;
+    color: #000;
+    margin-bottom: 46px;
+  }
+
+  &__btn-empty-back {
+    width: 400px;
+  }
+}

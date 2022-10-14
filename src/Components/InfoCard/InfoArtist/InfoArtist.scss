@@ -1,0 +1,66 @@
+@import '../../../assets/css/Mixins.scss';
+
+.infocard-artist {
+  &__info {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__profile-name {
+    .infocard-artist__text {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__img {
+    width: 68px;
+    height: 68px;
+    border-radius: 20px;
+    margin-right: 30px;
+  }
+
+  &__text {
+    @include AcuminproM;
+    display: block;
+    font-size: 16px;
+    line-height: 1.1;
+    color: #000;
+  }
+
+  &__subtext {
+    @include AcuminproM;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    color: #888;
+  }
+
+  &__download {
+    @include AcuminproR;
+    font-size: 15px;
+    line-height: 42px;
+    text-decoration-line: underline;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__ico-download {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+  }
+}
