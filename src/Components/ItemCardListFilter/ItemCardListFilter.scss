@@ -14,10 +14,10 @@
     &-keyword {
       position: relative;
       display: block;
-      max-width: 701px;
+      width: calc((100% - ($margin-between-card * 3)) / 2 + $margin-between-card);
       height: 60px;
       margin-left: 36px;
-      margin-right: 39px;
+      margin-right: 36px;
       flex: 1;
   
       &-search {
@@ -51,6 +51,16 @@
 
       &::placeholder {
         color: #888;
+      }
+    }
+
+    &-sort {
+      display: flex;
+      align-items: center;
+      width: calc((100% - ($margin-between-card * 3)) / 4);
+
+      .dropdown {
+        flex: 1;
       }
     }
   }
