@@ -1,6 +1,8 @@
 @import '../../assets/css/Mixins.scss';
 
 .itemcard-list-filter {
+  $margin-between-card: 36px;
+
   min-height: 675px;
 
   &__header {
@@ -57,7 +59,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    width: 333px;
+    width: calc((100% - ($margin-between-card * 3)) / 4);
     height: 60px;
     box-sizing: border-box;
     padding: 0 20px;
@@ -125,7 +127,7 @@
 
   &__options {
     box-sizing: border-box;
-    min-width: 333px;
+    min-width: calc((100% - ($margin-between-card * 3)) / 4);
     margin-right: 36px;
     padding: 0 20px;
     background: #fff;

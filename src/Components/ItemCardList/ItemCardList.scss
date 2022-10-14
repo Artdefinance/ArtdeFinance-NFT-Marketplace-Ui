@@ -3,12 +3,25 @@
 .itemcard-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: (333px + 36px) * 4;
-  margin: 0 -18px;
   justify-content: flex-start;
 
   .itemcard {
-    margin: 0 18px 70px;
+    margin: 0 36px 70px 0;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    @at-root .itemcard-list-filter--visible & {
+      &:nth-child(4n) {
+        margin-right: 36px;
+      }
+
+      &:nth-child(3n),
+      &:nth-child(12n) {
+        margin-right: 0;
+      }
+    }
   }
 
   &--empty {

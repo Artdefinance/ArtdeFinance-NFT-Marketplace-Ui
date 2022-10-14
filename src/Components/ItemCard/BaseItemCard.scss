@@ -1,23 +1,33 @@
 @import '../../assets/css/Mixins.scss';
 
 .itemcard {
+  $base-width: 333;
+  $base-height: 593;
+  $img-height: 393;
+  $margin-between-card: 36px;
+  $content-height: 200px;
+
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 333px;
-  height: 593px;
+  width: calc((100% - ($margin-between-card * 3)) / 4);
+  height: calc(percentage($base-height / $base-width) - $content-height);
   border-radius: 10px;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 15px 40px 0 rgba(187, 187, 187, .15);
+
+  @at-root .itemcard-list-filter--visible & {
+    width: calc((100% - ($margin-between-card * 2)) / 3);
+  }
 
   &:hover {
     box-shadow: 0 25px 40px 0 rgba(96, 69, 255, .15);
   }
 
   &__img {
-    padding-top: 118%; // 393px/333px
+    padding-top: percentage($img-height / $base-width);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #f0f0f0;
@@ -61,12 +71,11 @@
 
   &__content {
     position: relative;
-    top: -2px;
     display: flex;
     flex-direction: column;
-    margin-top: auto;
-    margin-bottom: auto;
     padding: 0 22px;
+    height: $content-height;
+    justify-content: center;
   }
 
   &__title {

@@ -13,7 +13,6 @@ function ArtItemCard({
 }) {
   return (
     <BaseItemCard
-      className="itemcard--artist"
       imageUrl={imageUrl}
       title={title}
       description={description}

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import BaseItemCard from './BaseItemCard';
-import './ArtistItemCard.scss';
 
 function ArtistItemCard({
   imageUrl,
