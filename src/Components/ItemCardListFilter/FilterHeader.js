@@ -33,15 +33,15 @@ function FilterHeader({
             <Icons shape="refresh" />
           </button>
         ) : (
-        <>
-          <Dropdown dropWidth="216px" dropHeight="60px" dropTitle="Sort by" content={sortingOptions} dropFontSize="16px" dropFontColor="#000000" />
+        <div className="itemcard-list-filter__header-sort">
+          <Dropdown dropHeight="60px" dropTitle="Sort by" content={sortingOptions} dropFontSize="16px" dropFontColor="#000000" />
           {!!resultCount && (
             <span className="itemcard-list-filter__results">
               {`${resultCount} `}
               Results
             </span>
           )}
-        </>
+        </div>
       )}
     </div>
   );
