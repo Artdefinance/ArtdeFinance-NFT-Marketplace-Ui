@@ -3,6 +3,7 @@
 .collection-table {
   width: 100%;
   border-collapse: collapse;
+  border-radius: 10px;
   background-color: #fff;
 
   th {
@@ -10,7 +11,7 @@
     font-size: 18px;
     line-height: 1;
     height: 60px;
-    color: #000;
+    color: #888;
     text-align: center;
     vertical-align: middle;
   }
@@ -103,8 +104,11 @@
     @include AcuminproM;
     font-size: 16px;
     line-height: 1.2;
-    color: #888;
     text-align: center;
+
+    a {
+      color: #366dfc;
+    }
 
     svg {
       margin-left: 2px;

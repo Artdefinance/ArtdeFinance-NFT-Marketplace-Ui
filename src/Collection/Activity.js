@@ -102,7 +102,7 @@ function Activity() {
                 <CollectionTableCell>9a246888...</CollectionTableCell>
                 <CollectionTableCell>ADF</CollectionTableCell>
                 <CollectionTablePriceCell primaryValue="678.9878 ETH" secondaryValue="$ 104" />
-                <CollectionTableDateCell date="20 days ago" />
+                <CollectionTableDateCell date="20 days ago" linkUrl="/" />
               </CollectionTableRow>
             ))}
           </CollectionTable>
