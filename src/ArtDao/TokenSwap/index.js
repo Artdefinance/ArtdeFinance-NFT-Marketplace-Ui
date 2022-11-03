@@ -44,7 +44,7 @@ function TokenSwap() {
           A swapped vADF does not support swapping back to ADF.
           ADF cannot be swapped in decimal units.
         </Alert>
-        <Button className="token-swap__btn-submit button button--black button--default" content="SWAP" type="type1" />
+        <Button className="token-swap__btn-submit button button--black button--mid" content="SWAP" type="type1" />
       </form>
     </div>
   );
