@@ -3,22 +3,22 @@
 .itemcard__btn-vote {
   height: 70px;
   border-radius: 5px;
-  background: linear-gradient(113.33deg, #000 34.93%, #555 97.4%);
+  background: linear-gradient(178.21deg, #c8c8c8 50%, #f4f4f4 113.28%);
 
   &:before {
-    @include bg-image-icon('ico_vote.svg');
+    @include bg-image-icon('ico_vote_disabled.svg');
     display: inline-block;
     width: 36px;
     height: 45px;
     content: '';
   }
 
-  &[disabled] {
-    background: linear-gradient(178.21deg, #c8c8c8 50%, #f4f4f4 113.28%);
+  @at-root .itemcard:hover &:not([disabled]) {
+    background: linear-gradient(113.33deg, #000 34.93%, #555 97.4%);
   }
 
-  &[disabled]:before {
-    @include bg-image-icon('ico_vote_disabled.svg');
+  @at-root .itemcard:hover &:not([disabled]):before {
+    @include bg-image-icon('ico_vote.svg');
   }
 }
 

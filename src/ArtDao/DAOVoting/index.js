@@ -14,7 +14,6 @@ function DAOVoting() {
           imageUrl={imageUrl}
           title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
           description="Starry Night Over the Rhon Starry Night Over the Rhon"
-          isVoted
         />
         <VoteItemCard
           imageUrl={imageUrl}
@@ -39,7 +38,6 @@ function DAOVoting() {
           imageUrl={imageUrl}
           title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
           description="Starry Night Over the Rhon Starry Night Over the Rhon"
-          isVoted
         />
         <ArtItemCard
           imageUrl={imageUrl}
@@ -67,7 +65,6 @@ function DAOVoting() {
           imageUrl={imageUrl}
           title="Vincent van Gogh Vincent van Gogh Vincent van Gogh"
           description="Starry Night Over the Rhon Starry Night Over the Rhon"
-          isVoted
         />
         <VoteItemCard
           imageUrl={imageUrl}
