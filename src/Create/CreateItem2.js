@@ -9,7 +9,7 @@ function CreateItem2() {
         <div className="create__content create__content--center">
           <div className="create__content-inner">
             <div className="create__empty-img">
-              <img src="/assets/images/common/collection-create.png" alt="" width="466" height="320" />
+              <img src="/assets/images/common/collection-create.png" alt="" width="419" height="288" />
             </div>
             <p className="create__empty-msg">
               There are no collections yet.
