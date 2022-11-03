@@ -48,7 +48,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   details: {
-    padding: '12px 0 14px',
+    padding: '12px 0 4px',
     flexDirection: 'column',
   },
 }));
