@@ -1,5 +1,4 @@
 import { useState, useId } from 'react';
-import { Link } from 'react-router-dom';
 import Modal from '@material-ui/core/Modal';
 import {
   InfoCard,
@@ -9,12 +8,7 @@ import {
 } from '../Components/InfoCard';
 import Button from '../Components/Button/Button';
 import InputTitle from '../Components/Inputs/InputTitle';
-import Input from '../Components/Inputs/Input';
-import RadioBox from '../Components/Inputs/RadioBox';
-import Dropdown from '../Components/Dropdown/Dropdown';
-import Alert from '../Components/Alert';
 import ConfirmCheckbox from '../Components/Inputs/ConfirmCheckbox';
-import VerificationCode from '../Components/Inputs/VerificationCode';
 import ArtworksAuction1 from './ArtworksAuction1';
 import ContactInformation from './ContactInformation';
 
