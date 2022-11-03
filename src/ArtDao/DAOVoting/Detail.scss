@@ -345,10 +345,10 @@
     }
 
     &-input {
-      @include RotaR;
+      @include RotaB;
       font-size: 28px;
       line-height: 60px;
-      color: #bbb;
+      color: #000;
       display: block;
       box-sizing: border-box;
       padding: 10px 92px;
@@ -358,6 +358,7 @@
       text-align: right;
       background: #fff;
       appearance: textfield;
+      font-weight: bold;
 
       &::placeholder {
         color: #bbb;
