@@ -16,6 +16,7 @@ import Alert from '../Components/Alert';
 import ConfirmCheckbox from '../Components/Inputs/ConfirmCheckbox';
 import VerificationCode from '../Components/Inputs/VerificationCode';
 import ArtworksAuction1 from './ArtworksAuction1';
+import ContactInformation from './ContactInformation';
 
 function ArtworksAuction2Modal() {
   const labelId = useId();
@@ -93,107 +94,7 @@ function ArtworksAuction2Modal() {
               </div>
             </div>
 
-            <div className="marketplace-artworks-modal__sub-content">
-              <h3 className="marketplace-artworks-modal__title">Contact Information</h3>
-
-              <div className="marketplace-artworks-modal__input-container">
-                <InputTitle>Email Address</InputTitle>
-                <Input name="email" placeholder="Email Address" />
-                <span className="marketplace-artworks-modal__input-msg">Please enter a valid email address</span>
-              </div>
-
-              <div className="marketplace-artworks-modal__split">
-                <div className="marketplace-artworks-modal__split-item">
-                  <InputTitle required>First Name</InputTitle>
-                  <Input name="firstname" placeholder="First Name" />
-                </div>
-                <div className="marketplace-artworks-modal__split-item">
-                  <InputTitle required>Last Name</InputTitle>
-                  <Input name="lastname" placeholder="Last Name" />
-                </div>
-              </div>
-              <div className="marketplace-artworks-modal__split">
-                <div className="marketplace-artworks-modal__split-item">
-                  <InputTitle required>Country</InputTitle>
-                  <Dropdown dropClass="rota-24" dropWidth="368px" dropHeight="40px" dropTitle="Select a your Country" content={[{ id: '1', title: 'South Korea' }]} dropFontSize="24px" dropFontColor="#bbb" />
-                </div>
-                <div className="marketplace-artworks-modal__split-item">
-                  <InputTitle required>Postal Code</InputTitle>
-                  <Input name="zipcode" placeholder="00000" />
-                </div>
-              </div>
-              <div className="marketplace-artworks-modal__split">
-                <div className="marketplace-artworks-modal__split-item">
-                  <InputTitle required>State, Province, or Region</InputTitle>
-                  <Dropdown dropClass="rota-24" dropWidth="368px" dropHeight="40px" dropTitle="Select a State, Province, or Region" content={[{ id: '1', title: 'Seoul' }]} dropFontSize="24px" dropFontColor="#bbb" />
-                </div>
-                <div className="marketplace-artworks-modal__split-item">
-                  <InputTitle required>City</InputTitle>
-                  <Input name="city" placeholder="Please enter a city" />
-                </div>
-              </div>
-
-              <div className="marketplace-artworks-modal__input-container">
-                <InputTitle required>Street Address</InputTitle>
-                <Input name="street" placeholder="Please enter a street address" />
-              </div>
-
-              <div className="marketplace-artworks-modal__input-container">
-                <InputTitle>Detail Address</InputTitle>
-                <Input name="detail" placeholder="Apartment, Suite, Etc. (Optional)" />
-              </div>
-
-              <InputTitle required>Phone Number</InputTitle>
-              <div className="marketplace-artworks-modal__phone">
-                <Dropdown dropClass="rota-24" dropWidth="111px" dropHeight="40px" dropTitle="" defaultSelectedId="1" content={[{ id: '1', title: '🇰🇷 +82' }]} dropFontSize="20px" dropFontColor="#555" />
-                <Input name="phone" placeholder="Please enter without hyphens." />
-                <Button pressFucn={() => hideModal(true)} className="button button--black button--default button--type1" disabled="true" content="Send Code" />
-              </div>
-
-              <div className="marketplace-artworks-modal__input-container">
-                <Alert type="primary">
-                  The phone number you enter can’t be changed after you place your order,
-                  so please make sure it’s correct. Message and data rates may apply.
-                </Alert>
-              </div>
-
-              <div className="marketplace-artworks-modal__input-container">
-                <InputTitle required>SMS Verification Code</InputTitle>
-                <VerificationCode />
-                <VerificationCode error />
-              </div>
-
-              <div className="marketplace-artworks-modal__input-container">
-                <InputTitle required>How would you like to get your order?</InputTitle>
-                <RadioBox options={['I’ll keep the artwork in the gallery.', 'I’d lke it delivered.']} />
-                <Alert type="primary">
-                  Compensation for loss or damage to the artwork during storage is in accordance
-                  with the insurance purchased by the gallery.
-                </Alert>
-              </div>
-
-              <div className="marketplace-artworks-modal__confirm">
-                <ConfirmCheckbox
-                  defaultChecked={false}
-                  name={(
-                    <>
-                    I have read and agree to artdefinance’s
-                    {' '}
-                    <Link to="/">Terms of Use</Link>
-                    {' '}
-                    and
-                    {' '}
-                    <Link to="/">Privacy Policy.</Link>
-                    </>
-                  )}
-                />
-              </div>
-
-              <div className="marketplace-artworks-modal__buttons">
-                <Button pressFucn={() => hideModal(true)} className="button button--black-line button--mid button--type1" content="Cancel" />
-                <Button pressFucn={() => hideModal(true)} className="button button--black button--mid button--type1" content="Bid Now" />
-              </div>
-            </div>
+            <ContactInformation hideModal={hideModal} />
           </InfoCard>
 
           <hr />

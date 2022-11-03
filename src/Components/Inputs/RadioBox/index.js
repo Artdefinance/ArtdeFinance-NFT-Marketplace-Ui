@@ -2,11 +2,13 @@ import { useId, useState } from 'react';
 import PropTypes from 'prop-types';
 import './RadioBox.scss';
 
-function RadioBox({ options, defaultSelected }) {
+function RadioBox({ options, defaultSelected, onChangeValue }) {
   const radioName = useId();
   const [selected, setSelected] = useState(defaultSelected || options[0]);
   const onChange = (event) => {
-    setSelected(event.target.value);
+    const { value } = event.target;
+    onChangeValue(value);
+    setSelected(value);
   };
 
   return (
@@ -26,11 +28,13 @@ function RadioBox({ options, defaultSelected }) {
 
 RadioBox.defaultProps = {
   defaultSelected: undefined,
+  onChangeValue: () => {},
 };
 
 RadioBox.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   defaultSelected: PropTypes.string,
+  onChangeValue: PropTypes.func,
 };
 
 export default RadioBox;

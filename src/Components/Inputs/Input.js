@@ -4,11 +4,13 @@ import clsx from 'clsx';
 import Icons from '../Icons/Icons';
 import './Input.scss';
 
-function Input({ name, disabled, placeholder, getValue }) {
+function Input({ name, disabled, placeholder, getValue, onChangeValue }) {
   const [value, setValue] = useState(getValue || '');
   const inputRef = useRef(null);
-  const onChange = (event) => {
-    setValue(event.target.value);
+  const onChangeInput = (event) => {
+    const { value: targetValue } = event.target;
+    onChangeValue(targetValue);
+    setValue(targetValue);
   };
   const clearText = () => {
     setValue('');
@@ -24,7 +26,7 @@ function Input({ name, disabled, placeholder, getValue }) {
           className="input__input"
           placeholder={placeholder}
           name={name}
-          onChange={onChange}
+          onChange={onChangeInput}
           value={value}
           disabled={disabled === 'true'}
         />
@@ -42,6 +44,7 @@ Input.defaultProps = {
   disabled: '',
   placeholder: '',
   getValue: '',
+  onChangeValue: () => {},
 };
 
 Input.propTypes = {
@@ -49,6 +52,7 @@ Input.propTypes = {
   disabled: PropTypes.string,
   placeholder: PropTypes.string,
   getValue: PropTypes.string,
+  onChangeValue: PropTypes.func,
 };
 
 export default Input;

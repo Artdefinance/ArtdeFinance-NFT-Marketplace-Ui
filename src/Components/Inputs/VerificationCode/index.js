@@ -3,9 +3,11 @@ import clsx from 'clsx';
 import './VerificationCode.scss';
 import IconStyle from '../../Icons/Icons';
 
-function VerificationCode({ error }) {
+function VerificationCode({ error, onNumberInserted }) {
   const onChange = (event) => {
     const { value, nextElementSibling } = event.target;
+    const hasValue = Array.from(event.target.parentElement.querySelectorAll('input')).some((el) => !!el.value);
+    onNumberInserted(hasValue);
     if (value && nextElementSibling?.tagName?.toLowerCase?.() === 'input') {
       event.target.nextElementSibling?.focus?.();
     }
@@ -31,10 +33,12 @@ function VerificationCode({ error }) {
 
 VerificationCode.defaultProps = {
   error: false,
+  onNumberInserted: () => {},
 };
 
 VerificationCode.propTypes = {
   error: PropTypes.bool,
+  onNumberInserted: PropTypes.func,
 };
 
 export default VerificationCode;

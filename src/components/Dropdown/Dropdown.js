@@ -36,7 +36,7 @@ export default class Dropdown extends React.Component {
   }
 
   handleClick2(e) {
-    const { content } = this.props;
+    const { content, onSelected } = this.props;
     const selected = content.find(({ id }) => id === e.currentTarget.dataset.id);
 
     if (!selected) return;
@@ -45,6 +45,10 @@ export default class Dropdown extends React.Component {
       getDropTitle: selected.title,
       isToggleOn: !prevState.isToggleOn,
     }));
+
+    if (typeof onSelected === 'function') {
+      onSelected(selected.title);
+    }
   }
 
   render() {
