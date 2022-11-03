@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import clsx from 'clsx';
 import './Dropdown.scss';
 
 export default class Dropdown extends React.Component {
@@ -64,7 +65,7 @@ export default class Dropdown extends React.Component {
       color: dropFontColor,
     };
     return (
-      <div className={`dropdown ${dropClass}`} style={dropdownStyle}>
+      <div className={clsx('dropdown', dropClass, !!getDropTitle && 'dropdown--selected')} style={dropdownStyle}>
         <button
           type="button"
           className={isToggleOn ? 'dropdown__title active' : 'dropdown__title '}
@@ -78,16 +79,16 @@ export default class Dropdown extends React.Component {
           style={{ width: dropWidth }}
         >
           {content && content.map((items) => (
-              <button
-                type="button"
-                className="dropdown__item"
-                key={items.id}
-                data-id={items.id}
-                onClick={this.handleClick2}
-              >
-                <span>{items.title}</span>
-              </button>
-            ))}
+            <button
+              type="button"
+              className="dropdown__item"
+              key={items.id}
+              data-id={items.id}
+              onClick={this.handleClick2}
+            >
+              <span>{items.title}</span>
+            </button>
+          ))}
         </div>
       </div>
     );

@@ -43,6 +43,10 @@
     @include RotaSB;
   }
 
+  &--selected &__title span {
+    color: #000;
+  }
+
   &__title-icon {
     width: 30px;
     height: 24px;
